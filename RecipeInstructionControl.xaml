@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ProjectD2.RecipeInstructionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjectD2"
+             mc:Ignorable="d" 
+             d:DesignHeight="125.769" d:DesignWidth="444.667">
+    <Grid Height="125.769" Width="444.667">
+        <TextBox x:Name="IngredientName" HorizontalAlignment="Left" Height="31.923" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="429.667" Margin="5,0,0,51.923" FontSize="18" Text="Instruction"/>
+        <TextBlock x:Name="Step_Number" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="18" Margin="5,5,0,0" Height="31.923"><Run Text="Step "/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="IngredientName_Copy" HorizontalAlignment="Left" Height="31.923" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="349.667" Margin="5,0,0,10" FontSize="18" Text="Upload Photo"/>
+        <Button Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="359.667,83.846,0,0" Height="31.923"/>
+
+    </Grid>
+</UserControl>

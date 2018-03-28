@@ -1,0 +1,132 @@
+﻿<Window x:Class="ProjectD2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectD2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="500" ResizeMode="NoResize" WindowStyle="None">
+    <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
+        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Browse_Recipes" HorizontalAlignment="Left" Height="36" Margin="24.333,93.724,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White"><Run Text="Browse Recipes"/><LineBreak/><Run/></TextBlock>
+            <ScrollViewer x:Name="Browse_Scroller" HorizontalAlignment="Left" Height="520.276" Margin="0,134.724,0,0" VerticalAlignment="Top" Width="500" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
+                <UniformGrid x:Name="Recipe_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450" MouseDown="Recipe_Grid_MouseDown"/>
+            </ScrollViewer>
+            <Button x:Name="AddRecipe_Button" Content="Add Recipe" HorizontalAlignment="Left" Height="90" Margin="167.5,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Click="AddRecipe_Button_Click"/>
+            <Button x:Name="Random_Button" Content="Random" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165"/>
+            <Button x:Name="Favorites_Button" Content="Favorites" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="Favorites_Button_Click"/>
+            <TextBox x:Name="Search_Box" HorizontalAlignment="Left" Height="43" Margin="19.333,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" VerticalContentAlignment="Center" Padding="20,0,0,0"/>
+            <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Height="43" Margin="404.333,24,0,0" VerticalAlignment="Top" Width="75.625"/>
+
+        </Grid>
+        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Favorites" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Favorites"/>
+            <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
+                <UniformGrid x:Name="Favorite_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
+            </ScrollViewer>
+            <Button x:Name="FavoritesBack_Button" Content="Back" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="FavoritesBack_Button_Click"/>
+
+        </Grid>
+        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+            <ComboBox x:Name="CategoryBox" Margin="129.3,104.998,250.7,610.155" FontSize="18">
+                <ComboBoxItem Content="Main" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="Side" HorizontalAlignment="Left" Width="118"/>
+            </ComboBox>
+            <TextBlock x:Name="Name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="20,20,0,0"/>
+            <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="31.923" Margin="19.393,56.923,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="460.607" FontSize="18"/>
+            <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="19.393,173.845,0,0"/>
+            <ScrollViewer x:Name="IngredientsScroller" HorizontalAlignment="Left" Height="143" Margin="20,210.769,0,0" VerticalAlignment="Top" Width="460">
+                <StackPanel x:Name="IngredientList" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            </ScrollViewer>
+            <Button x:Name="AddIngredient_Button" Content="Add&#xA;Ingredient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="206,358.769,0,0" VerticalContentAlignment="Center" Click="AddIngredient_Button_Click"/>
+            <TextBlock x:Name="Instructions" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="20,393.833,0,0" Height="31.923"><Run Text="Instructions"/><LineBreak/><Run/></TextBlock>
+            <ScrollViewer x:Name="InstructionsScroller" HorizontalAlignment="Left" Height="174.833" Margin="29.393,430.756,0,0" VerticalAlignment="Top" Width="460.607">
+                <StackPanel x:Name="InstructionList" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            </ScrollViewer>
+            <Button x:Name="AddStep_Button" Content="Add&#xA;Step" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="206,610.589,0,0" VerticalContentAlignment="Center" Click="AddStep_Button_Click"/>
+            <Button x:Name="AddRecipeBack_Button" Content="Back" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="AddRecipeBack_Button_Click"/>
+            <Button x:Name="AddRecipe_Button1" Content="Add Recipe" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD"/>
+            <TextBlock x:Name="CategoryText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="19.393,104.998,0,0" Height="34.847" Width="109.907"><Run Text="Category"/><LineBreak/></TextBlock>
+        </Grid>
+        <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+            <TextBlock x:Name="RecipeName" HorizontalAlignment="Left" Margin="20.666,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="294.667" Text="Recipe Name:" Foreground="White" TextDecorations="Underline"/>
+            <Button x:Name="AddToFav_Button" Content="«" HorizontalAlignment="Left" Margin="448.077,23.987,0,0" VerticalAlignment="Top" Width="31.923" Height="31.924" FontSize="24" FontFamily="Wingdings" Background="White" Foreground="#FF008BFF"/>
+            <ScrollViewer x:Name="RecipeScroller" HorizontalAlignment="Left" Height="402.332" VerticalAlignment="Top" Width="459.334" Margin="20.666,54.923,0,0" Cursor="ScrollNS">
+                <StackPanel x:Name="RecipeList">
+                    <Image x:Name="RecipePhoto" HorizontalAlignment="Left" Height="440.334" VerticalAlignment="Top" Width="440.334" Source="pasta.jpg"/>
+                    <TextBlock x:Name="RecipeIngredients" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.677" FontSize="18" Foreground="White"><Run Text="Ingredient List:"/><LineBreak/></TextBlock>
+                    <StackPanel x:Name="IngredientsList" Margin="0,0,219.501,0" Height="224.334"/>
+                    <TextBlock x:Name="RecipeInstructions" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"><LineBreak></LineBreak><Run Foreground="White" Text="Recipe Instructions:"/></TextBlock>
+                    <Grid x:Name="RecipeInstructionList" Height="172.186" Margin="0,0,-25.75,0">
+                        <TextBlock x:Name="RecipeInstructionList1" TextWrapping="Wrap" Foreground="White" Margin="10,17.334,10,0" Cursor="ScrollNS"><Run Text="1. This TextBox will be populated with the instructions taken directly from the recipe"/><LineBreak/><Run Text="2. Instructions will added, spacing them on different lines and numbering them"/></TextBlock>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+            <Button x:Name="ViewRecipeBack_Button" Content="Back" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="ViewRecipeBack_Button_Click"/>
+            <TextBlock x:Name="Recommendations" HorizontalAlignment="Left" Margin="20.666,457.255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="294.667" Text="Recommendations" Foreground="White" TextDecorations="{x:Null}"/>
+            <ScrollViewer x:Name="RecScroller" HorizontalAlignment="Left" Height="160.821" Margin="20.666,494.179,0,0" VerticalAlignment="Top" Width="459.334" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible" Cursor="ScrollWE">
+                <StackPanel x:Name="RecommendedList" Orientation="Horizontal" d:IsHidden="True"/>
+            </ScrollViewer>
+            <Button x:Name="StartCooking_Button" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="StartCooking_Button_Click" Content="Start Cooking"/>
+        </Grid>
+        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
+            <Button x:Name="ViewRecipeBack_Button_Copy" Content="Stop Cooking" HorizontalAlignment="Left" Height="90" Margin="372.438,622.5,-37.438,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="ViewRecipeBack_Button_Copy_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Grid x:Name="BackArrow" Margin="207.25,646.59,210.25,23.5" MouseDown="BackArrow_MouseDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="73*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse x:Name="Circle1" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Grid.ColumnSpan="2" Fill="#FF1D1D1D"/>
+                <TextBlock x:Name="Arrow1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Wingdings" FontSize="72" Foreground="White" Margin="8.875,5.583,0,-5.583" Width="65.285" Grid.ColumnSpan="2" Height="79.91"><Run FontFamily="Wingdings" Text="â"/></TextBlock>
+            </Grid>
+            <TextBlock x:Name="StepNumber" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="105.5,541,0,0">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform><Run Text="Step X of Y"/></TextBlock>
+            <TextBlock x:Name="StepDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="112.25,401.75,0,0" Height="144.923" Width="296.99">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Grid x:Name="ForwardArrow" Margin="206.75,25,210.75,645.09" MouseDown="ForwardArrow_MouseDown">
+                <Ellipse x:Name="Circle" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Margin="0,3,0,-3" Fill="#FF1D1D1D"/>
+                <TextBlock x:Name="Arrow" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" Width="63.5" FontFamily="Wingdings 3" Margin="9.5,0"><Run FontSize="72" FontFamily="Wingdings" Text="á"/></TextBlock>
+            </Grid>
+            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="164,130.5,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" Source="pasta.jpg">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+    </Grid>
+</Window>
