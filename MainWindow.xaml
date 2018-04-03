@@ -22,7 +22,7 @@
             <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Height="43" Margin="404.333,24,0,0" VerticalAlignment="Top" Width="75.625"/>
 
         </Grid>
-        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
+        <Grid x:Name="Favorites_Grid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
             <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
                 <UniformGrid x:Name="Favorite_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
             </ScrollViewer>
-            <Button x:Name="FavoritesBack_Button" Content="Back" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="FavoritesBack_Button_Click"/>
+            <Button x:Name="FavoritesBack_Button" Content="Back" HorizontalAlignment="Left" Height="117.491" Margin="0,632.509,0,0" VerticalAlignment="Top" Width="229.145" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="FavoritesBack_Button_Click"/>
 
         </Grid>
         <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
@@ -75,7 +75,7 @@
             </ScrollViewer>
             <Button x:Name="StartCooking_Button" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="StartCooking_Button_Click" Content="Start Cooking"/>
         </Grid>
-        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
+        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <Button x:Name="ViewRecipeBack_Button_Copy" Content="Stop Cooking" HorizontalAlignment="Left" Height="90" Margin="372.438,622.5,-37.438,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="ViewRecipeBack_Button_Copy_Click" RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
                     <TransformGroup>
