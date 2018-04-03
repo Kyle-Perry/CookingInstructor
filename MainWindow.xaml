@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:ProjectD2"
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="500" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="BorderStyle1" TargetType="{x:Type Border}"/>
+        <Storyboard x:Key="OnMouseLeftButtonDown1"/>
+    </Window.Resources>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
         <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
             <Grid.ColumnDefinitions>
@@ -27,10 +31,13 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="Favorites" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Favorites"/>
-            <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
-                <UniformGrid x:Name="Favorite_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
-            </ScrollViewer>
-            <Button x:Name="FavoritesBack_Button" Content="Back" HorizontalAlignment="Left" Height="117.491" Margin="0,632.509,0,0" VerticalAlignment="Top" Width="229.145" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="FavoritesBack_Button_Click"/>
+            <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1" BorderBrush="White"/>
+            <Grid Margin="0,660,300.366,0" MouseDown="Grid_MouseDown">
+                <Border x:Name="border" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="199.634" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="48" Foreground="White"><Run Text=" "/><Run Text="Back"/><LineBreak/><Run/></TextBlock>
+                </Border>
+
+            </Grid>
 
         </Grid>
         <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">

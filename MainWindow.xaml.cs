@@ -32,7 +32,7 @@ namespace ProjectD2
                 RecipeTileControl c = new RecipeTileControl();
                 c.Recipe_Name.Text += " " + i;
 
-                Favorite_Grid.Children.Add(a);
+                Favorites_Grid.Children.Add(a);
                 Recipe_Grid.Children.Add(b);
                 RecommendedList.Children.Add(c);
 
@@ -114,6 +114,11 @@ namespace ProjectD2
 
         private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
         {
+        }
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HomePage_Grid.Visibility = Visibility.Visible;
+            Favorites_Grid.Visibility = Visibility.Hidden;
         }
     }
 }

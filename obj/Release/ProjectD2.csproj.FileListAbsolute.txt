@@ -21,3 +21,26 @@ C:\Users\Kyle Perry\source\repos\ProjectD2\obj\Release\ProjectD2.csproj.Generate
 C:\Users\Kyle Perry\source\repos\ProjectD2\obj\Release\ProjectD2.csproj.CoreCompileInputs.cache
 C:\Users\Kyle Perry\source\repos\ProjectD2\obj\Release\ProjectD2.exe
 C:\Users\Kyle Perry\source\repos\ProjectD2\obj\Release\ProjectD2.pdb
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.csprojResolveAssemblyReference.cache
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\IngredientInfoControl.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\IngredientPieceControl.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\MainWindow.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\RecipeInstructionControl.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\RecipeTileControl.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\App.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2_MarkupCompile.cache
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2_MarkupCompile.lref
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.exe
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.pdb
+C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\ProjectD2.exe.config
+C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\ProjectD2.exe
+C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\ProjectD2.pdb
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\IngredientInfoControl.baml
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\IngredientPieceControl.baml
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\MainWindow.baml
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\RecipeInstructionControl.baml
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\RecipeTileControl.baml
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.g.resources
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.Properties.Resources.resources
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.csproj.GenerateResource.cache
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\ProjectD2.csproj.CoreCompileInputs.cache
