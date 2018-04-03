@@ -27,6 +27,60 @@
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="FavoriteFade">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Favorites_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AddRecipeFade">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock2">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RandomFade">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Random_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock3">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RandomRestore">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Random_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock3">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="FavoriteRestore">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Favorites_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OnMouseLeave1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock2">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="border">
@@ -35,9 +89,27 @@
         <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="border">
             <BeginStoryboard x:Name="BackButtonRestore_BeginStoryboard" Storyboard="{StaticResource BackButtonRestore}"/>
         </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Favorites_Button">
+            <BeginStoryboard x:Name="BackButtonFade_BeginStoryboard1" Storyboard="{StaticResource FavoriteFade}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="AddRecipe_Button">
+            <BeginStoryboard x:Name="FavoriteFade_BeginStoryboard" Storyboard="{StaticResource AddRecipeFade}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="Random_Button">
+            <BeginStoryboard x:Name="RandomFade_BeginStoryboard" Storyboard="{StaticResource RandomFade}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Random_Button">
+            <BeginStoryboard x:Name="RandomRestore_BeginStoryboard" Storyboard="{StaticResource RandomRestore}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Favorites_Button">
+            <BeginStoryboard x:Name="FavoriteRestore_BeginStoryboard" Storyboard="{StaticResource FavoriteRestore}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="AddRecipe_Button">
+            <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}"/>
+        </EventTrigger>
     </Window.Triggers>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
-        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
+        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -45,14 +117,20 @@
             <ScrollViewer x:Name="Browse_Scroller" HorizontalAlignment="Left" Height="520.276" Margin="0,134.724,0,0" VerticalAlignment="Top" Width="500" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
                 <UniformGrid x:Name="Recipe_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450" MouseDown="Recipe_Grid_MouseDown"/>
             </ScrollViewer>
-            <Button x:Name="AddRecipe_Button" Content="Add Recipe" HorizontalAlignment="Left" Height="90" Margin="167.5,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Click="AddRecipe_Button_Click"/>
-            <Button x:Name="Random_Button" Content="Random" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165"/>
-            <Button x:Name="Favorites_Button" Content="Favorites" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="Favorites_Button_Click"/>
             <TextBox x:Name="Search_Box" HorizontalAlignment="Left" Height="43" Margin="19.333,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" VerticalContentAlignment="Center" Padding="20,0,0,0"/>
             <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Height="43" Margin="404.333,24,0,0" VerticalAlignment="Top" Width="75.625"/>
+            <Border x:Name="Favorites_Button" BorderBrush="White" BorderThickness="0,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="0,673.091,0,0" Background="#FF49AEF0" MouseDown="Favorites_Button_Click">
+                <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+            </Border>
+            <Border x:Name="AddRecipe_Button" BorderBrush="White" BorderThickness="2.5,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="165" Margin="167.5,673.091,0,0" Background="#FF49AEF0" MouseDown="AddRecipe_Click">
+                <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+            </Border>
+            <Border x:Name="Random_Button" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0">
+                <TextBlock x:Name="textBlock3" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Random" Foreground="White"/>
+            </Border>
 
         </Grid>
-        <Grid x:Name="Favorites_Grid">
+        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>

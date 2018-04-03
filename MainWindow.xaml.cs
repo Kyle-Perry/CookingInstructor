@@ -72,24 +72,6 @@ namespace ProjectD2
             AddRecipe_Grid.Visibility = Visibility.Hidden;
         }
 
-        private void FavoritesBack_Button_Click(object sender, RoutedEventArgs e)
-        {
-            HomePage_Grid.Visibility = Visibility.Visible;
-            Favorites_Grid.Visibility = Visibility.Hidden;
-        }
-
-        private void Favorites_Button_Click(object sender, RoutedEventArgs e)
-        {
-            HomePage_Grid.Visibility = Visibility.Hidden;
-            Favorites_Grid.Visibility = Visibility.Visible;
-        }
-
-        private void AddRecipe_Button_Click(object sender, RoutedEventArgs e)
-        {
-            HomePage_Grid.Visibility = Visibility.Hidden;
-            AddRecipe_Grid.Visibility = Visibility.Visible;
-        }
-
         private void BackArrow_MouseDown(object sender, MouseButtonEventArgs e)
         {
         }
@@ -119,6 +101,18 @@ namespace ProjectD2
         {
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
+        }
+
+        private void Favorites_Button_Click(object sender, MouseButtonEventArgs e)
+        {
+            HomePage_Grid.Visibility = Visibility.Hidden;
+            Favorites_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void AddRecipe_Click(object sender, MouseButtonEventArgs e)
+        {
+            HomePage_Grid.Visibility = Visibility.Hidden;
+            AddRecipe_Grid.Visibility = Visibility.Visible;
         }
     }
 }
