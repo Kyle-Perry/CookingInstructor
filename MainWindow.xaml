@@ -9,7 +9,33 @@
     <Window.Resources>
         <Style x:Key="BorderStyle1" TargetType="{x:Type Border}"/>
         <Storyboard x:Key="OnMouseLeftButtonDown1"/>
+        <Storyboard x:Key="BackButtonFade">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="border">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="BackButtonRestore">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="border">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="border">
+            <BeginStoryboard x:Name="BackButtonFade_BeginStoryboard" Storyboard="{StaticResource BackButtonFade}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="border">
+            <BeginStoryboard x:Name="BackButtonRestore_BeginStoryboard" Storyboard="{StaticResource BackButtonRestore}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
         <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
             <Grid.ColumnDefinitions>
@@ -32,9 +58,9 @@
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="Favorites" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Favorites"/>
             <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1" BorderBrush="White"/>
-            <Grid Margin="0,660,300.366,0" MouseDown="Grid_MouseDown">
-                <Border x:Name="border" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="199.634" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0">
-                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="48" Foreground="White"><Run Text=" "/><Run Text="Back"/><LineBreak/><Run/></TextBlock>
+            <Grid x:Name="Favourites_BackButton" Margin="0,673.091,322.621,0" MouseDown="Grid_MouseDown">
+                <Border x:Name="border" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0">
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="48" Foreground="White"><Run Text=" "/><Run Text="Back"/><LineBreak/><Run/></TextBlock>
                 </Border>
 
             </Grid>
