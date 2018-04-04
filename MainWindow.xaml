@@ -170,7 +170,7 @@
             <Button x:Name="AddToFav_Button" Content="«" HorizontalAlignment="Left" Margin="448.077,23.987,0,0" VerticalAlignment="Top" Width="31.923" Height="31.924" FontSize="24" FontFamily="Wingdings" Background="White" Foreground="#FF008BFF"/>
             <ScrollViewer x:Name="RecipeScroller" HorizontalAlignment="Left" Height="402.332" VerticalAlignment="Top" Width="459.334" Margin="20.666,54.923,0,0" Cursor="ScrollNS">
                 <StackPanel x:Name="RecipeList">
-                    <Image x:Name="RecipePhoto" HorizontalAlignment="Left" Height="440.334" VerticalAlignment="Top" Width="440.334" Source="pasta.jpg"/>
+                    <Image x:Name="RecipePhoto" HorizontalAlignment="Left" Height="440.334" VerticalAlignment="Top" Width="440.334"/>
                     <TextBlock x:Name="RecipeIngredients" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.677" FontSize="18" Foreground="White"><Run Text="Ingredient List:"/><LineBreak/></TextBlock>
                     <StackPanel x:Name="IngredientsList" Margin="0,0,219.501,0" Height="224.334"/>
                     <TextBlock x:Name="RecipeInstructions" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"><LineBreak></LineBreak><Run Foreground="White" Text="Recipe Instructions:"/></TextBlock>
@@ -228,7 +228,7 @@
                 <Ellipse x:Name="Circle" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Margin="0,3,0,-3" Fill="#FF1D1D1D"/>
                 <TextBlock x:Name="Arrow" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" Width="63.5" FontFamily="Wingdings 3" Margin="9.5,0"><Run FontSize="72" FontFamily="Wingdings" Text="á"/></TextBlock>
             </Grid>
-            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="164,130.5,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" Source="pasta.jpg">
+            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="164,130.5,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

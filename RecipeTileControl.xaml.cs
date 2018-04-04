@@ -25,6 +25,14 @@ namespace ProjectD2
         {
             this.recipe = recipe;
             InitializeComponent();
+            this.Recipe_Name.Text = this.recipe.recipeName;
+            if (recipe.photoPath != null)
+            {
+                BitmapImage src = new BitmapImage();
+                src.UriSource = new Uri(this.recipe.photoPath, UriKind.Relative);
+                src.CacheOption = BitmapCacheOption.OnLoad;
+                this.Recipe_Image.Source = src;
+            }
         }
     }
 }

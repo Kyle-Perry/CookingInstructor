@@ -12,7 +12,7 @@
                 <RowDefinition Height="13*"/>
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
-            <Image x:Name="Recipe_Image" HorizontalAlignment="Left" Height="124.5" VerticalAlignment="Top" Width="174" Margin="5,5.5,0,0" Grid.RowSpan="2" Source="pasta.jpg" Stretch="UniformToFill"/>
+            <Image x:Name="Recipe_Image" HorizontalAlignment="Left" Height="124.5" VerticalAlignment="Top" Width="174" Margin="5,5.5,0,0" Grid.RowSpan="2" Stretch="UniformToFill"/>
             <TextBlock x:Name="Recipe_Name" HorizontalAlignment="Left" Height="16.765" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" TextAlignment="Center" Margin="5,10,0,0" Foreground="White" Text="Recipe" Background="#FF1D1D1D"/>
         </Grid>
 

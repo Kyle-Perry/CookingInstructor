@@ -20,10 +20,13 @@ namespace ProjectD2
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Recipe target;
+
         public MainWindow()
         {
+            target = null;
             InitializeComponent();
-            for(int i = 1; i <= 10; i++)
+            /*for(int i = 1; i <= 10; i++)
             {
                 RecipeTileControl a = new RecipeTileControl(null);
                 a.Recipe_Name.Text += " " + i;
@@ -39,7 +42,18 @@ namespace ProjectD2
                 IngredientPieceControl ipc = new IngredientPieceControl();
                 IngredientsList.Children.Add(ipc);
                 
-            }
+            }*/
+            Recipe aRecipe = new Recipe();
+            aRecipe.recipeName = "Spaghetti";
+            aRecipe.photoPath = "/resource/pasta.jpg";
+            RecipeTileControl a = new RecipeTileControl(aRecipe);
+
+            //Recipe bRecipe = new Recipe();
+            //bRecipe.recipeName = "Garlic Bread";
+            //RecipeTileControl b = new RecipeTileControl(bRecipe);
+
+            Recipe_Grid.Children.Add(a);
+            //Recipe_Grid.Children.Add(b);
 
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
