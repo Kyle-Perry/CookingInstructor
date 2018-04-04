@@ -25,11 +25,11 @@ namespace ProjectD2
             InitializeComponent();
             for(int i = 1; i <= 10; i++)
             {
-                RecipeTileControl a = new RecipeTileControl();
+                RecipeTileControl a = new RecipeTileControl(null);
                 a.Recipe_Name.Text += " " + i;
-                RecipeTileControl b = new RecipeTileControl();
+                RecipeTileControl b = new RecipeTileControl(null);
                 b.Recipe_Name.Text += " " + i;
-                RecipeTileControl c = new RecipeTileControl();
+                RecipeTileControl c = new RecipeTileControl(null);
                 c.Recipe_Name.Text += " " + i;
 
                 Favorites_Grid.Children.Add(a);

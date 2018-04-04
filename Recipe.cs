@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class Recipe
 {
     public string recipeName;
@@ -6,12 +8,12 @@ public class Recipe
     public List<Ingredient> ingredients;
     public List<Instruction> instructions;
     
-    public Recipe Recipe()
+    public Recipe()
     {
 
     }
 
-    public Recipe Recipe(string recipeName, string category, string photoPath, List<Ingredient> ingredients, List<Instructions> instructions)
+    public Recipe(string recipeName, string category, string photoPath, List<Ingredient> ingredients, List<Instruction> instructions)
     {
         this.recipeName = recipeName;
         this.category = category;
@@ -19,37 +21,6 @@ public class Recipe
         this.ingredients = ingredients;
         this.instructions = instructions;
     }
-
-    /*public string getRecipeName()
-    {
-        return recipeName;
-    }
-
-    public void setRecipeName(string recipeName)
-    {
-        this.recipeName = recipeName;
-    }
-
-    public string getCategory()
-    {
-        return category;
-    }
-
-    public string getPhotoPath()
-    {
-        return photoPath;
-    }
-
-    public bool emptyIngredients()
-    {
-        return ingredients.isEmpty();
-    }
-
-    public bool emptyIngredients()
-    {
-        return instructions.isEmpty();
-    }*/
-
 
 }
 

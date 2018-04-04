@@ -20,8 +20,10 @@ namespace ProjectD2
     /// </summary>
     public partial class RecipeTileControl : UserControl
     {
-        public RecipeTileControl()
+        public Recipe recipe;
+        public RecipeTileControl(Recipe recipe)
         {
+            this.recipe = recipe;
             InitializeComponent();
         }
     }
