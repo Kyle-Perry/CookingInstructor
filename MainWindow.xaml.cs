@@ -126,7 +126,14 @@ namespace ProjectD2
         private void AddRecipe_Click(object sender, MouseButtonEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Hidden;
+            Favorites_Grid.Visibility = Visibility.Hidden;
             AddRecipe_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void Favourites_Favorites_Button_Click(object sender, MouseButtonEventArgs e)
+        {
+            HomePage_Grid.Visibility = Visibility.Visible;
+            Favorites_Grid.Visibility = Visibility.Hidden;
         }
     }
 }

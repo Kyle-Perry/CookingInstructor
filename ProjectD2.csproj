@@ -55,12 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ingredient.cs" />
     <Compile Include="IngredientInfoControl.xaml.cs">
       <DependentUpon>IngredientInfoControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="IngredientPieceControl.xaml.cs">
       <DependentUpon>IngredientPieceControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Recipe.cs" />
     <Compile Include="RecipeInstructionControl.xaml.cs">
       <DependentUpon>RecipeInstructionControl.xaml</DependentUpon>
     </Compile>
