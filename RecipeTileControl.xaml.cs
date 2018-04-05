@@ -28,11 +28,18 @@ namespace ProjectD2
             this.Recipe_Name.Text = this.recipe.recipeName;
             if (recipe.photoPath != null)
             {
+                /*
                 BitmapImage src = new BitmapImage();
-                src.UriSource = new Uri(this.recipe.photoPath, UriKind.Relative);
-                src.CacheOption = BitmapCacheOption.OnLoad;
+                //src.BeginInit();
+                src.UriSource = new Uri(this.recipe.photoPath, UriKind.RelativeOrAbsolute);
+                src.CacheOption = BitmapCacheOption.OnDemand;
+                //src.EndInit();
                 this.Recipe_Image.Source = src;
+                this.Recipe_Image.Visibility = Visibility.Visible;
+                */
             }
+       
         }
     }
+
 }

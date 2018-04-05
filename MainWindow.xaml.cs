@@ -26,40 +26,24 @@ namespace ProjectD2
         {
             target = null;
             InitializeComponent();
-            /*for(int i = 1; i <= 10; i++)
+            for(int i = 1; i <= 10; i++)
             {
-                RecipeTileControl a = new RecipeTileControl(null);
-                a.Recipe_Name.Text += " " + i;
-                RecipeTileControl b = new RecipeTileControl(null);
-                b.Recipe_Name.Text += " " + i;
-                RecipeTileControl c = new RecipeTileControl(null);
-                c.Recipe_Name.Text += " " + i;
+                Recipe recipe = new Recipe("Recipe " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                RecipeTileControl a = new RecipeTileControl(recipe);
 
-                Favorites_Grid.Children.Add(a);
-                Recipe_Grid.Children.Add(b);
-                RecommendedList.Children.Add(c);
+                Console.Write("made recipe control");
+                Recipe_Grid.Children.Add(a);
 
-                IngredientPieceControl ipc = new IngredientPieceControl();
-                IngredientsList.Children.Add(ipc);
-                
-            }*/
-            Recipe aRecipe = new Recipe();
-            aRecipe.recipeName = "Spaghetti";
-            aRecipe.photoPath = "/resource/pasta.jpg";
-            RecipeTileControl a = new RecipeTileControl(aRecipe);
-
-            //Recipe bRecipe = new Recipe();
-            //bRecipe.recipeName = "Garlic Bread";
-            //RecipeTileControl b = new RecipeTileControl(bRecipe);
-
-            Recipe_Grid.Children.Add(a);
-            //Recipe_Grid.Children.Add(b);
+                a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);                
+            }
+        
 
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
             StepGrid.Visibility = Visibility.Hidden;
+
         }
 
         private void AddIngredient_Button_Click(object sender, RoutedEventArgs e)
@@ -90,8 +74,10 @@ namespace ProjectD2
         {
         }
 
-        private void Recipe_Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Tile_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            target = (sender as RecipeTileControl).recipe;
+            RecipeName.Text = target.recipeName;
             HomePage_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
         }

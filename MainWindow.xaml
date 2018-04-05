@@ -183,13 +183,13 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
-        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
+        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="Browse_Recipes" HorizontalAlignment="Left" Height="36" Margin="24.333,93.724,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White"><Run Text="Browse Recipes"/><LineBreak/><Run/></TextBlock>
             <ScrollViewer x:Name="Browse_Scroller" HorizontalAlignment="Left" Height="520.276" Margin="0,134.724,0,0" VerticalAlignment="Top" Width="500" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
-                <UniformGrid x:Name="Recipe_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450" MouseDown="Recipe_Grid_MouseDown"/>
+                <UniformGrid x:Name="Recipe_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
             </ScrollViewer>
             <TextBox x:Name="Search_Box" HorizontalAlignment="Left" Height="43" Margin="19.333,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" VerticalContentAlignment="Center" Padding="20,0,0,0"/>
             <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Height="43" Margin="404.333,24,0,0" VerticalAlignment="Top" Width="75.625"/>
@@ -242,7 +242,7 @@
             <Button x:Name="AddRecipe_Button1" Content="Add Recipe" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD"/>
             <TextBlock x:Name="CategoryText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="19.393,104.998,0,0" Height="34.847" Width="109.907"><Run Text="Category"/><LineBreak/></TextBlock>
         </Grid>
-        <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
+        <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <TextBlock x:Name="RecipeName" HorizontalAlignment="Left" Margin="20.666,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="294.667" Text="Recipe Name:" Foreground="White" TextDecorations="Underline"/>
             <Button x:Name="AddToFav_Button" Content="«" HorizontalAlignment="Left" Margin="448.077,23.987,0,0" VerticalAlignment="Top" Width="31.923" Height="31.924" FontSize="24" FontFamily="Wingdings" Background="White" Foreground="#FF008BFF"/>
             <ScrollViewer x:Name="RecipeScroller" HorizontalAlignment="Left" Height="402.332" VerticalAlignment="Top" Width="459.334" Margin="20.666,54.923,0,0" Cursor="ScrollNS">
