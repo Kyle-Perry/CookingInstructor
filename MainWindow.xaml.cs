@@ -135,5 +135,11 @@ namespace ProjectD2
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
         }
+
+        private void Recipe_Back_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ViewRecipe_Grid.Visibility = Visibility.Hidden;
+            HomePage_Grid.Visibility = Visibility.Visible;
+        }
     }
 }
