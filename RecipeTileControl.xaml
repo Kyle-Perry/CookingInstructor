@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="135" d:DesignWidth="190">
     <Grid>
-        <Grid x:Name="Background_Grid" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="185" Background="#FF168D03" Margin="2.75,0,0,0">
+        <Grid x:Name="Background_Grid" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="185" Background="#FF49AEF0" Margin="2.75,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="13*"/>
                 <RowDefinition Height="4*"/>

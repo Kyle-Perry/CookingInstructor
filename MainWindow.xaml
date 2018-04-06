@@ -90,6 +90,12 @@
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock5">
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
             </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="border1">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFDFDFD"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock7">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="AddRecipetoBlue">
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe_Button_Copy">
@@ -97,6 +103,14 @@
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
             </ColorAnimationUsingKeyFrames>
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock5">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="border1">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock7">
                 <EasingColorKeyFrame KeyTime="0" Value="Black"/>
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
             </ColorAnimationUsingKeyFrames>
@@ -133,6 +147,96 @@
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
             </ColorAnimationUsingKeyFrames>
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AddRecipe_AddtoWhite">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StartCooking_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock8">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AddRecipe_AddtoBlue">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StartCooking_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock8">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SearchButtontoWhite">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="SearchButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock9">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SearchButtontoBlue">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="SearchButton">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock9">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StartCookingtoWhite">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StartCooking_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock8">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StartCookingtoBlue">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StartCooking_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock8">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StopCookingtoWhite">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StopCooking_Button">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock10">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StopButtontoBlue">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="StopCooking_Button">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock10">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AddRecipeAddtoWhite">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe_AddButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AddRecipeAddtoBlue">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe_AddButton">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF49AEF0"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="AddRecipe">
                 <EasingColorKeyFrame KeyTime="0" Value="Black"/>
                 <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
             </ColorAnimationUsingKeyFrames>
@@ -181,9 +285,45 @@
         <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="Recipe_BackButton">
             <BeginStoryboard x:Name="RecipeBacktoBlue_BeginStoryboard" Storyboard="{StaticResource RecipeBacktoBlue}"/>
         </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="AddRecipe_BackButton">
+            <BeginStoryboard x:Name="AddRecipetoWhite_BeginStoryboard1" Storyboard="{StaticResource AddRecipetoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="AddRecipe_BackButton">
+            <BeginStoryboard x:Name="AddRecipetoBlue_BeginStoryboard1" Storyboard="{StaticResource AddRecipetoBlue}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="StartCooking_Button">
+            <BeginStoryboard x:Name="AddRecipe_AddtoWhite_BeginStoryboard" Storyboard="{StaticResource AddRecipe_AddtoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="StartCooking_Button">
+            <BeginStoryboard x:Name="AddRecipe_AddtoBlue_BeginStoryboard" Storyboard="{StaticResource AddRecipe_AddtoBlue}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="SearchButton">
+            <BeginStoryboard x:Name="SearchButtontoWhite_BeginStoryboard" Storyboard="{StaticResource SearchButtontoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="SearchButton">
+            <BeginStoryboard x:Name="SearchButtontoBlue_BeginStoryboard" Storyboard="{StaticResource SearchButtontoBlue}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="StartCooking_Button">
+            <BeginStoryboard x:Name="StartCookingtoWhite_BeginStoryboard" Storyboard="{StaticResource StartCookingtoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="StartCooking_Button">
+            <BeginStoryboard x:Name="StartCookingtoBlue_BeginStoryboard" Storyboard="{StaticResource StartCookingtoBlue}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="StopCooking_Button">
+            <BeginStoryboard x:Name="StopCookingtoWhite_BeginStoryboard" Storyboard="{StaticResource StopCookingtoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="StopCooking_Button">
+            <BeginStoryboard x:Name="StopButtontoBlue_BeginStoryboard" Storyboard="{StaticResource StopButtontoBlue}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="AddRecipe_AddButton">
+            <BeginStoryboard x:Name="AddRecipeAddtoWhite_BeginStoryboard" Storyboard="{StaticResource AddRecipeAddtoWhite}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="AddRecipe_AddButton">
+            <BeginStoryboard x:Name="AddRecipeAddtoBlue_BeginStoryboard" Storyboard="{StaticResource AddRecipeAddtoBlue}"/>
+        </EventTrigger>
     </Window.Triggers>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
-        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D">
+        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -192,7 +332,6 @@
                 <UniformGrid x:Name="Recipe_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
             </ScrollViewer>
             <TextBox x:Name="Search_Box" HorizontalAlignment="Left" Height="43" Margin="19.333,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" VerticalContentAlignment="Center" Padding="20,0,0,0"/>
-            <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Height="43" Margin="404.333,24,0,0" VerticalAlignment="Top" Width="75.625"/>
             <Border x:Name="Favorites_Button" BorderBrush="White" BorderThickness="0,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="0,673.091,0,0" Background="#FF49AEF0" MouseDown="Favorites_Button_Click">
                 <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
             </Border>
@@ -202,26 +341,13 @@
             <Border x:Name="Random_Button" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0">
                 <TextBlock x:Name="textBlock3" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Random" Foreground="White"/>
             </Border>
-
-        </Grid>
-        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="Favorites" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Favorites"/>
-            <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1" BorderBrush="White"/>
-            <Border x:Name="Favorites_Button_Copy" BorderBrush="White" BorderThickness="0,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="0,673.091,0,0" Background="White" MouseDown="Favourites_Favorites_Button_Click">
-                <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black"/>
-            </Border>
-            <Border x:Name="AddRecipe_Button_Copy" BorderBrush="White" BorderThickness="2.5,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="165" Margin="167.5,673.091,0,0" Background="#FF49AEF0" MouseDown="AddRecipe_Click">
-                <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
-            </Border>
-            <Border x:Name="Random_Button_Copy" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0">
-                <TextBlock x:Name="textBlock6" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Random" Foreground="White"/>
+            <Border x:Name="SearchButton" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="42.4" VerticalAlignment="Top" Width="45.019" Margin="407.854,24.836,0,0" Background="#FF49AEF0">
+                <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="🔍" Foreground="White" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
 
         </Grid>
-        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+
+        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
             <ComboBox x:Name="CategoryBox" Margin="129.3,104.998,250.7,610.155" FontSize="18">
                 <ComboBoxItem Content="Main" HorizontalAlignment="Left" Width="118"/>
                 <ComboBoxItem Content="Side" HorizontalAlignment="Left" Width="118"/>
@@ -238,9 +364,16 @@
                 <StackPanel x:Name="InstructionList" HorizontalAlignment="Left" VerticalAlignment="Top" />
             </ScrollViewer>
             <Button x:Name="AddStep_Button" Content="Add&#xA;Step" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="206,610.589,0,0" VerticalContentAlignment="Center" Click="AddStep_Button_Click"/>
-            <Button x:Name="AddRecipeBack_Button" Content="Back" HorizontalAlignment="Left" Height="90" Margin="0,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="AddRecipeBack_Button_Click"/>
-            <Button x:Name="AddRecipe_Button1" Content="Add Recipe" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD"/>
             <TextBlock x:Name="CategoryText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" Margin="19.393,104.998,0,0" Height="34.847" Width="109.907"><Run Text="Category"/><LineBreak/></TextBlock>
+            <Grid x:Name="AddRecipe_BackButton" Margin="0,673.091,322.621,0" MouseDown="AddRecipe_Back_MouseDown">
+                <Border x:Name="border1" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0">
+                    <TextBlock x:Name="textBlock7" TextWrapping="Wrap" TextAlignment="Center" FontSize="48" Foreground="White"><Run Text=" "/><Run Text="Back"/><LineBreak/><Run/></TextBlock>
+                </Border>
+
+            </Grid>
+            <Border x:Name="AddRecipe_AddButton" BorderBrush="White" BorderThickness="5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="50,0,0,0" Background="#FF49AEF0" Margin="322.621,673.091,0,0" MouseDown="AddRecipe_AddButton_Click">
+                <TextBlock x:Name="AddRecipe" TextWrapping="Wrap" TextAlignment="Center" FontSize="27" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Add Recipe"/>
+            </Border>
         </Grid>
         <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <TextBlock x:Name="RecipeName" HorizontalAlignment="Left" Margin="20.666,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="294.667" Text="Recipe Name:" Foreground="White" TextDecorations="Underline"/>
@@ -260,26 +393,26 @@
             <ScrollViewer x:Name="RecScroller" HorizontalAlignment="Left" Height="160.821" Margin="20.666,494.179,0,0" VerticalAlignment="Top" Width="459.334" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible" Cursor="ScrollWE">
                 <StackPanel x:Name="RecommendedList" Orientation="Horizontal" d:IsHidden="True"/>
             </ScrollViewer>
-            <Button x:Name="StartCooking_Button" HorizontalAlignment="Left" Height="90" Margin="335,660,0,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="StartCooking_Button_Click" Content="Start Cooking"/>
             <Grid x:Name="Recipe_BackButton" Margin="0,673.091,322.621,0" MouseDown="Recipe_Back_MouseDown">
                 <Border x:Name="border" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0">
                     <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="48" Foreground="White"><Run Text=" "/><Run Text="Back"/><LineBreak/><Run/></TextBlock>
                 </Border>
 
             </Grid>
+            <Border x:Name="StartCooking_Button" BorderBrush="White" BorderThickness="5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="50,0,0,0" Background="#FF49AEF0" Margin="322.621,673.091,0,0" MouseDown="StartCooking_Click">
+                <TextBlock x:Name="textBlock8" TextWrapping="Wrap" TextAlignment="Center" FontSize="27" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Start Cooking"/>
+            </Border>
         </Grid>
-        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
-            <Button x:Name="ViewRecipeBack_Button_Copy" Content="Stop Cooking" HorizontalAlignment="Left" Height="90" Margin="372.438,622.5,-37.438,0" VerticalAlignment="Top" Width="165" BorderBrush="#FF707070" Background="#FFDDDDDD" Click="ViewRecipeBack_Button_Copy_Click" RenderTransformOrigin="0.5,0.5">
-                <Button.RenderTransform>
+        <Grid x:Name="StepGridMiddle" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+            <Grid x:Name="BackArrow" Margin="11.759,278.626,405.741,391.464" MouseDown="BackArrowMiddle_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
-                        <RotateTransform Angle="270"/>
+                        <RotateTransform Angle="90"/>
                         <TranslateTransform/>
                     </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
-            <Grid x:Name="BackArrow" Margin="207.25,646.59,210.25,23.5" MouseDown="BackArrow_MouseDown">
+                </Grid.RenderTransform>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="73*"/>
                     <ColumnDefinition Width="10*"/>
@@ -287,30 +420,21 @@
                 <Ellipse x:Name="Circle1" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Grid.ColumnSpan="2" Fill="#FF1D1D1D"/>
                 <TextBlock x:Name="Arrow1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Wingdings" FontSize="72" Foreground="White" Margin="8.875,5.583,0,-5.583" Width="65.285" Grid.ColumnSpan="2" Height="79.91"><Run FontFamily="Wingdings" Text="â"/></TextBlock>
             </Grid>
-            <TextBlock x:Name="StepNumber" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="105.5,541,0,0">
-                <TextBlock.RenderTransform>
+            <TextBlock x:Name="StepNumber" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="108.99,251.564,0,0"><Run Text="Step X of Y"/></TextBlock>
+            <TextBlock x:Name="StepDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="108.99,299.914,0,0" Height="144.923" Width="284.772"/>
+            <Grid x:Name="ForwardArrow" Margin="410.968,275.473,6.532,394.617" MouseDown="ForwardArrowMiddle_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
-                        <RotateTransform Angle="270"/>
+                        <RotateTransform Angle="90"/>
                         <TranslateTransform/>
                     </TransformGroup>
-                </TextBlock.RenderTransform><Run Text="Step X of Y"/></TextBlock>
-            <TextBlock x:Name="StepDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="112.25,401.75,0,0" Height="144.923" Width="296.99">
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="270"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-            <Grid x:Name="ForwardArrow" Margin="206.75,25,210.75,645.09" MouseDown="ForwardArrow_MouseDown">
+                </Grid.RenderTransform>
                 <Ellipse x:Name="Circle" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Margin="0,3,0,-3" Fill="#FF1D1D1D"/>
                 <TextBlock x:Name="Arrow" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" Width="63.5" FontFamily="Wingdings 3" Margin="9.5,0"><Run FontSize="72" FontFamily="Wingdings" Text="á"/></TextBlock>
             </Grid>
-            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="164,130.5,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
+            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="163.127,215.154,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -320,6 +444,88 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
+            <Border x:Name="StopCooking_Button" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0" Margin="0,673.091,0,0" MouseDown="StopCookingMiddle_Button_MouseDown">
+                <TextBlock x:Name="textBlock10" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Foreground="White" Text="Stop Cooking" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Grid>
+        <Grid x:Name="StepGridFirst" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+            <TextBlock x:Name="StepNumber1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="108.99,251.564,0,0"><Run Text="Step X of Y"/></TextBlock>
+            <TextBlock x:Name="StepDescription1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="108.99,299.914,0,0" Height="144.923" Width="284.772"/>
+            <Grid x:Name="ForwardArrow1" Margin="410.968,275.473,6.532,394.617" MouseDown="ForwardArrowFirst_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Ellipse x:Name="Circle3" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Margin="0,3,0,-3" Fill="#FF1D1D1D"/>
+                <TextBlock x:Name="Arrow3" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" Width="63.5" FontFamily="Wingdings 3" Margin="9.5,0"><Run FontSize="72" FontFamily="Wingdings" Text="á"/></TextBlock>
+            </Grid>
+            <Image x:Name="StepHelperImage1" HorizontalAlignment="Left" Height="173" Margin="163.127,215.154,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Border x:Name="StopCooking_Button1" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0" Margin="0,673.091,0,0" MouseDown="StopCookingFirst_Button_MouseDown">
+                <TextBlock x:Name="textBlock11" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Foreground="White" Text="Stop Cooking" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Grid>
+        <Grid x:Name="StepGridEnd" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+            <Grid x:Name="BackArrow1" Margin="11.759,278.626,405.741,391.464" MouseDown="BackArrowLast_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="73*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse x:Name="Circle2" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Grid.ColumnSpan="2" Fill="#FF1D1D1D"/>
+                <TextBlock x:Name="Arrow2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Wingdings" FontSize="72" Foreground="White" Margin="8.875,5.583,0,-5.583" Width="65.285" Grid.ColumnSpan="2" Height="79.91"><Run FontFamily="Wingdings" Text="â"/></TextBlock>
+            </Grid>
+            <TextBlock x:Name="StepNumber2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="108.99,251.564,0,0"><Run Text="Step X of Y"/></TextBlock>
+            <TextBlock x:Name="StepDescription2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="108.99,299.914,0,0" Height="144.923" Width="284.772"/>
+            <Image x:Name="StepHelperImage2" HorizontalAlignment="Left" Height="173" Margin="163.127,215.154,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Border x:Name="StopCooking_Button2" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0" Margin="0,673.091,0,0" MouseDown="StopCookingEnd_Button_MouseDown">
+                <TextBlock x:Name="textBlock12" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Foreground="White" Text="Stop Cooking" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Grid>
+        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Favorites" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Favorites"/>
+            <ScrollViewer x:Name="Favorites_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1" BorderBrush="White"/>
+            <Border x:Name="Favorites_Button_Copy" BorderBrush="White" BorderThickness="0,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="0,673.091,0,0" Background="White" MouseDown="Favourites_Favorites_Button_Click">
+                <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black"/>
+            </Border>
+            <Border x:Name="AddRecipe_Button_Copy" BorderBrush="White" BorderThickness="2.5,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="165" Margin="167.5,673.091,0,0" Background="#FF49AEF0" MouseDown="AddRecipe_Click">
+                <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+            </Border>
+            <Border x:Name="Random_Button_Copy" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0">
+                <TextBlock x:Name="textBlock6" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Random" Foreground="White"/>
+            </Border>
+
         </Grid>
     </Grid>
 </Window>

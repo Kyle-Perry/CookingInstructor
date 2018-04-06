@@ -42,7 +42,9 @@ namespace ProjectD2
             Favorites_Grid.Visibility = Visibility.Hidden;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
-            StepGrid.Visibility = Visibility.Hidden;
+            StepGridFirst.Visibility = Visibility.Hidden;
+            StepGridMiddle.Visibility = Visibility.Hidden;
+            StepGridEnd.Visibility = Visibility.Hidden;
 
         }
 
@@ -70,28 +72,12 @@ namespace ProjectD2
             AddRecipe_Grid.Visibility = Visibility.Hidden;
         }
 
-        private void BackArrow_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-        }
-
         private void Tile_MouseDown(object sender, MouseButtonEventArgs e)
         {
             target = (sender as RecipeTileControl).recipe;
             RecipeName.Text = target.recipeName;
             HomePage_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
-        }
-
-        private void StartCooking_Button_Click(object sender, RoutedEventArgs e)
-        {
-            StepGrid.Visibility = Visibility.Visible;
-            ViewRecipe_Grid.Visibility = Visibility.Hidden;
-        }
-
-        private void ViewRecipeBack_Button_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            ViewRecipe_Grid.Visibility = Visibility.Visible;
-            StepGrid.Visibility = Visibility.Hidden;
         }
 
         private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
@@ -126,6 +112,65 @@ namespace ProjectD2
         {
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
             HomePage_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void AddRecipe_Back_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            AddRecipe_Grid.Visibility = Visibility.Hidden;
+            HomePage_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void StartCooking_Click(object sender, MouseButtonEventArgs e)
+        {
+            StepGridFirst.Visibility = Visibility.Visible;
+            ViewRecipe_Grid.Visibility = Visibility.Hidden;
+        }
+
+        private void BackArrowLast_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridMiddle.Visibility = Visibility.Visible;
+            StepGridEnd.Visibility = Visibility.Hidden;
+        }
+
+        private void ForwardArrowFirst_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridFirst.Visibility = Visibility.Hidden;
+            StepGridMiddle.Visibility = Visibility.Visible;
+        }
+
+        private void BackArrowMiddle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridFirst.Visibility = Visibility.Visible;
+            StepGridMiddle.Visibility = Visibility.Hidden;
+        }
+
+        private void ForwardArrowMiddle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridMiddle.Visibility = Visibility.Hidden;
+            StepGridEnd.Visibility = Visibility.Visible;
+        }
+
+        private void StopCookingMiddle_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridMiddle.Visibility = Visibility.Hidden;
+            ViewRecipe_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void StopCookingFirst_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridFirst.Visibility = Visibility.Hidden;
+            ViewRecipe_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void StopCookingEnd_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StepGridEnd.Visibility = Visibility.Hidden;
+            ViewRecipe_Grid.Visibility = Visibility.Visible;
+        }
+
+        private void AddRecipe_AddButton_Click(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
