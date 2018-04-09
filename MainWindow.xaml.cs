@@ -21,22 +21,40 @@ namespace ProjectD2
     public partial class MainWindow : Window
     {
         public Recipe target;
+        public List<Recipe> recipes;
+        public Serializer serializer;
 
         public MainWindow()
         {
+            recipes = null;
+            serializer = new Serializer("recipes.xml");
             target = null;
             InitializeComponent();
-            for(int i = 1; i <= 10; i++)
+            recipes = serializer.Read();
+            if (recipes == null)
             {
-                Recipe recipe = new Recipe("Recipe " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
-                RecipeTileControl a = new RecipeTileControl(recipe);
+                recipes = new List<Recipe>();
+                for (int i = 1; i <= 10; i++)
+                {
+                    Recipe recipe = new Recipe("Recipe " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                    RecipeTileControl a = new RecipeTileControl(recipe);
+                    recipes.Add(recipe);
+                    Recipe_Grid.Children.Add(a);
 
-                Console.Write("made recipe control");
-                Recipe_Grid.Children.Add(a);
-
-                a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);                
+                    a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                }
             }
-        
+            else
+            {
+                foreach(Recipe recipe in recipes)
+                {
+                    RecipeTileControl a = new RecipeTileControl(recipe);
+                    Recipe_Grid.Children.Add(a);
+
+                    a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                }
+            }
+            serializer.WriteRecipes(recipes);
 
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;

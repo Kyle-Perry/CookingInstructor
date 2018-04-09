@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<ArrayOfRecipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recipe>
+    <recipeName>Recipe 1</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 2</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 3</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 4</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 5</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 6</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 7</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 8</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 9</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+  <Recipe>
+    <recipeName>Recipe 10</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients />
+    <instructions />
+  </Recipe>
+</ArrayOfRecipe>
