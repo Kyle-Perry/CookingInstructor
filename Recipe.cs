@@ -7,7 +7,7 @@ public class Recipe
     public string photoPath;
     public List<Ingredient> ingredients;
     public List<Instruction> instructions;
-    bool isFavorite;
+    public bool isFavorite;
     
     public Recipe()
     {

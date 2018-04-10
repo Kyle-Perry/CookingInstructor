@@ -4,70 +4,280 @@
     <recipeName>Recipe 1</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 2</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 3</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 4</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 5</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 6</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 7</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 8</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 9</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 10</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
-    <instructions />
+    <ingredients>
+      <Ingredient>
+        <name>Liquid</name>
+        <measure>ml</measure>
+        <amount>250</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Dry</name>
+        <measure>tsp</measure>
+        <amount>2</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Do a thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Do another thing</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
   </Recipe>
 </ArrayOfRecipe>

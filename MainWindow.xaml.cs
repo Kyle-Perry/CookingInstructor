@@ -30,13 +30,17 @@ namespace ProjectD2
             serializer = new Serializer("recipes.xml");
             target = null;
             InitializeComponent();
-            recipes = serializer.Read();
+            //recipes = serializer.Read();
             if (recipes == null)
             {
                 recipes = new List<Recipe>();
                 for (int i = 1; i <= 10; i++)
                 {
                     Recipe recipe = new Recipe("Recipe " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                    recipe.ingredients.Add(new Ingredient("Liquid", "ml", 250 ));
+                    recipe.ingredients.Add(new Ingredient("Dry", "tsp", 2));
+                    recipe.instructions.Add(new Instruction("Do a thing", "pasta.jpg"));
+                    recipe.instructions.Add(new Instruction("Do another thing", "pasta.jpg"));
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     recipes.Add(recipe);
                     Recipe_Grid.Children.Add(a);
@@ -94,8 +98,22 @@ namespace ProjectD2
         {
             target = (sender as RecipeTileControl).recipe;
             RecipeName.Text = target.recipeName;
+            RecipeInstructionList1.Text = "";
+            IngredientsList.Children.Clear();
+            foreach(Ingredient ingredient in target.ingredients)
+            {
+                IngredientPieceControl piece = new IngredientPieceControl(ingredient);
+                IngredientsList.Children.Add(piece);
+            }
+            int i = 1;
+            foreach(Instruction instruction in target.instructions)
+            {
+                RecipeInstructionList1.Text += i + ".) " + instruction.info + "\n";
+                i++;
+            }
             HomePage_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
+            Favorites_Grid.Visibility = Visibility.Hidden;
         }
 
         private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
@@ -200,6 +218,18 @@ namespace ProjectD2
         {
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
+        }
+
+        private void AddToFav_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (target.isFavorite == false)
+            {
+                target.isFavorite = true;
+                RecipeTileControl addFav = new RecipeTileControl(target);
+                addFav.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+
+                Recipe_Grid_Copy.Children.Add(addFav);
+            }
         }
     }
 }
