@@ -67,3 +67,6 @@ U:\c481\CookingInstructor\obj\Release\ProjectD2.csproj.GenerateResource.Cache
 U:\c481\CookingInstructor\obj\Release\ProjectD2.csproj.CoreCompileInputs.cache
 U:\c481\CookingInstructor\obj\Release\ProjectD2.exe
 U:\c481\CookingInstructor\obj\Release\ProjectD2.pdb
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\BackButtonControl.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\xm\Documents\GitHub\CookingInstructor\obj\Release\BackButtonControl.baml

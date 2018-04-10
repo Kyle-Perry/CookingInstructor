@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BackButtonControl.xaml.cs">
+      <DependentUpon>BackButtonControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ingredient.cs" />
     <Compile Include="IngredientInfoControl.xaml.cs">
       <DependentUpon>IngredientInfoControl.xaml</DependentUpon>
@@ -70,6 +73,11 @@
     <Compile Include="RecipeTileControl.xaml.cs">
       <DependentUpon>RecipeTileControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Serializer.cs" />
+    <Page Include="BackButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IngredientInfoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
