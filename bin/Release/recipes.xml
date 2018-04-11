@@ -82,7 +82,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>false</isFavorite>
+    <isFavorite>true</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 4</recipeName>
@@ -138,7 +138,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>true</isFavorite>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 6</recipeName>
@@ -166,7 +166,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>true</isFavorite>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 7</recipeName>

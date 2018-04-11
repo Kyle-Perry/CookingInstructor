@@ -25,6 +25,8 @@ namespace ProjectD2
         public Serializer serializer;
         public Grid last;
         public int instructionIndex;
+        public Brush background;
+        public Brush foreground;
 
         public MainWindow()
         {
@@ -69,6 +71,9 @@ namespace ProjectD2
                 }
             }
 
+            background = AddToFav_Button.Background;
+            foreground = AddToFav_Button.Foreground;
+
             HomePage_Grid.Visibility = Visibility.Visible;
             last = HomePage_Grid;
             Favorites_Grid.Visibility = Visibility.Hidden;
@@ -95,6 +100,16 @@ namespace ProjectD2
         private void Tile_MouseDown(object sender, MouseButtonEventArgs e)
         {
             target = (sender as RecipeTileControl).recipe;
+            if (target.isFavorite == true)
+            {
+                AddToFav_Button.Foreground = background;
+                AddToFav_Button.Background = foreground;
+            }
+            else
+            {
+                AddToFav_Button.Foreground = foreground;
+                AddToFav_Button.Background = background;
+            }
             RecipeName.Text = target.recipeName;
             RecipeInstructionList1.Text = "";
             IngredientsList.Children.Clear();
@@ -127,7 +142,6 @@ namespace ProjectD2
             HomePage_Grid.Visibility = Visibility.Hidden;
             Favorites_Grid.Visibility = Visibility.Visible;
             last = Favorites_Grid;
-
         }
 
         private void AddRecipe_Click(object sender, MouseButtonEventArgs e)
@@ -258,11 +272,26 @@ namespace ProjectD2
         {
             if (target.isFavorite == false)
             {
+                AddToFav_Button.Foreground = background;
+                AddToFav_Button.Background = foreground;
                 target.isFavorite = true;
                 RecipeTileControl addFav = new RecipeTileControl(target);
                 addFav.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
-
                 Recipe_Grid_Copy.Children.Add(addFav);
+            }
+            else
+            {
+                target.isFavorite = false;
+                foreach (RecipeTileControl tile in Recipe_Grid_Copy.Children)
+                {
+                    if (tile.recipe == target)
+                    {
+                        Recipe_Grid_Copy.Children.Remove(tile);
+                        break;
+                    }
+                }
+                    AddToFav_Button.Foreground = foreground;
+                    AddToFav_Button.Background = background;
             }
             serializer.WriteRecipes(recipes);
 
