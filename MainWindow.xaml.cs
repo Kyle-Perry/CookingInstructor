@@ -155,6 +155,7 @@ namespace ProjectD2
             StepGrid.Visibility = Visibility.Visible;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
             StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
             BackArrow.Visibility = Visibility.Hidden;
             ForwardArrow.Visibility = Visibility.Visible;
             if (target.instructions.Count == 1)
@@ -167,6 +168,7 @@ namespace ProjectD2
         {
             instructionIndex++;
             StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
             if (target.instructions.Count > (instructionIndex + 1))
             {
                 ForwardArrow.Visibility = Visibility.Visible;
@@ -189,6 +191,7 @@ namespace ProjectD2
         {
             instructionIndex--;
             StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
             if (target.instructions.Count > (instructionIndex + 1))
             {
                 ForwardArrow.Visibility = Visibility.Visible;
@@ -233,7 +236,7 @@ namespace ProjectD2
         {
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
-            this.Search.Text = Search_Box.Text;
+            this.Search.Text = "\"" + Search_Box.Text + "\"";
             Search_Box.Text = "";
             foreach (Recipe recipe in recipes)
             {
