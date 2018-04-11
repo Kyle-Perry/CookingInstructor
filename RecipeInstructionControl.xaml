@@ -10,7 +10,7 @@
         <TextBox x:Name="StepInstruction" HorizontalAlignment="Left" Height="31.923" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="429.667" Margin="5,0,0,51.923" FontSize="18" Text="Instruction"/>
         <TextBlock x:Name="Step_Number" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="18" Margin="5,5,0,0" Height="31.923"><Run Text="Step "/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="PhotoFilepath" HorizontalAlignment="Left" Height="31.923" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="349.667" Margin="5,0,0,10" FontSize="18" Text="Upload Photo"/>
-        <Button Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="359.667,83.846,0,0" Height="31.923"/>
+        <Button Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="359.667,83.846,0,0" Height="31.923" Click="Button_Click"/>
 
     </Grid>
 </UserControl>
