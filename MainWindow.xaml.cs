@@ -112,6 +112,7 @@ namespace ProjectD2
             HomePage_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
+            Search_Grid.Visibility = Visibility.Hidden;
         }
 
         private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
@@ -211,6 +212,7 @@ namespace ProjectD2
         {
             Search_Grid.Visibility = Visibility.Hidden;
             HomePage_Grid.Visibility = Visibility.Visible;
+            Search_Scroller_Grid.Children.Clear();
             last = HomePage_Grid;
         }
 
@@ -220,6 +222,19 @@ namespace ProjectD2
             HomePage_Grid.Visibility = Visibility.Hidden;
             this.Search.Text = Search_Box.Text;
             Search_Box.Text = "";
+            foreach (Recipe recipe in recipes)
+            {
+                if (!Search.Text.Equals(""))
+                {
+                    if (recipe.recipeName.IndexOf(Search.Text, StringComparison.OrdinalIgnoreCase) >=0)
+                    {
+                        RecipeTileControl c = new RecipeTileControl(recipe);
+                        Search_Scroller_Grid.Children.Add(c);
+
+                        c.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                    }
+                }
+            }
             last = Search_Grid;
         }
 

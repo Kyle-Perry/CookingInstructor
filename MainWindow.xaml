@@ -433,7 +433,9 @@
         <Grid x:Name="Search_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <local:BackButtonControl x:Name="Search_BackButton" HorizontalAlignment="Left" Height="77.745" VerticalAlignment="Top" Width="177.236" Margin="0,672.255,0,0" MouseDown="Search_Back_Press"/>
             <TextBlock x:Name="Search" HorizontalAlignment="Left" Height="36" Margin="20.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" FontSize="24" Foreground="White" Text="Search"/>
-            <ScrollViewer x:Name="Search_Scroller" HorizontalAlignment="Left" Height="609" Margin="19.328,46,0,0" VerticalAlignment="Top" Width="460.671" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1" BorderBrush="White"/>
+            <ScrollViewer x:Name="Search_Scroller" HorizontalAlignment="Left" Height="520.276" Margin="0,134.724,0,0" VerticalAlignment="Top" Width="500" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Cursor="ScrollNS" PanningMode="VerticalOnly" PanningRatio="5" PanningDeceleration="1">
+                <UniformGrid x:Name="Search_Scroller_Grid" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Columns="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25,0,0,0" Width="450"/>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>
