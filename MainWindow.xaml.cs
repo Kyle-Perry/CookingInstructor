@@ -24,12 +24,14 @@ namespace ProjectD2
         public List<Recipe> recipes;
         public Serializer serializer;
         public Grid last;
+        public int instructionIndex;
 
         public MainWindow()
         {
             recipes = null;
             serializer = new Serializer("recipes.xml");
             target = null;
+            instructionIndex = 0;
             InitializeComponent();
             recipes = serializer.Read();
             if (recipes == null)
@@ -72,9 +74,7 @@ namespace ProjectD2
             Favorites_Grid.Visibility = Visibility.Hidden;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
-            StepGridFirst.Visibility = Visibility.Hidden;
-            StepGridMiddle.Visibility = Visibility.Hidden;
-            StepGridEnd.Visibility = Visibility.Hidden;
+            StepGrid.Visibility = Visibility.Hidden;
             Search_Grid.Visibility = Visibility.Hidden;
 
         }
@@ -115,9 +115,6 @@ namespace ProjectD2
             Search_Grid.Visibility = Visibility.Hidden;
         }
 
-        private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-        }
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Visible;
@@ -155,52 +152,68 @@ namespace ProjectD2
 
         private void StartCooking_Click(object sender, MouseButtonEventArgs e)
         {
-            StepGridFirst.Visibility = Visibility.Visible;
+            StepGrid.Visibility = Visibility.Visible;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
+            StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            BackArrow.Visibility = Visibility.Hidden;
+            ForwardArrow.Visibility = Visibility.Visible;
+            if (target.instructions.Count == 1)
+            {
+                ForwardArrow.Visibility = Visibility.Hidden;
+            }
         }
 
-        private void BackArrowLast_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ForwardArrow_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            StepGridMiddle.Visibility = Visibility.Visible;
-            StepGridEnd.Visibility = Visibility.Hidden;
+            instructionIndex++;
+            StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            if (target.instructions.Count > (instructionIndex + 1))
+            {
+                ForwardArrow.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ForwardArrow.Visibility = Visibility.Hidden;
+            }
+            if (instructionIndex > 0)
+            {
+                BackArrow.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BackArrow.Visibility = Visibility.Hidden;
+            }
         }
 
-        private void ForwardArrowFirst_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BackArrow_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            StepGridFirst.Visibility = Visibility.Hidden;
-            StepGridMiddle.Visibility = Visibility.Visible;
+            instructionIndex--;
+            StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
+            if (target.instructions.Count > (instructionIndex + 1))
+            {
+                ForwardArrow.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ForwardArrow.Visibility = Visibility.Hidden;
+            }
+            if (instructionIndex > 0)
+            {
+                BackArrow.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BackArrow.Visibility = Visibility.Hidden;
+            }
         }
 
-        private void BackArrowMiddle_MouseDown(object sender, MouseButtonEventArgs e)
+        private void StopCooking_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            StepGridFirst.Visibility = Visibility.Visible;
-            StepGridMiddle.Visibility = Visibility.Hidden;
-        }
-
-        private void ForwardArrowMiddle_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            StepGridMiddle.Visibility = Visibility.Hidden;
-            StepGridEnd.Visibility = Visibility.Visible;
-        }
-
-        private void StopCookingMiddle_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            StepGridMiddle.Visibility = Visibility.Hidden;
+            StepGrid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
+            instructionIndex = 0;
         }
 
-        private void StopCookingFirst_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            StepGridFirst.Visibility = Visibility.Hidden;
-            ViewRecipe_Grid.Visibility = Visibility.Visible;
-        }
-
-        private void StopCookingEnd_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            StepGridEnd.Visibility = Visibility.Hidden;
-            ViewRecipe_Grid.Visibility = Visibility.Visible;
-        }
-        
         private void Favorites_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Visible;
@@ -293,6 +306,5 @@ namespace ProjectD2
             serializer.WriteRecipes(recipes);
 
         }
-
     }
 }
