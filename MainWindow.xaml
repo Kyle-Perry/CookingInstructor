@@ -261,7 +261,7 @@
 
         </Grid>
 
-        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
             <ComboBox x:Name="CategoryBox" Margin="129.3,104.998,250.7,610.155" FontSize="18">
                 <ComboBoxItem Content="Main" HorizontalAlignment="Left" Width="118"/>
                 <ComboBoxItem Content="Side" HorizontalAlignment="Left" Width="118"/>
@@ -419,7 +419,7 @@
                 <TextBlock x:Name="textBlock12" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Foreground="White" Text="Stop Cooking" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
         </Grid>
-        <Grid x:Name="Favorites_Grid">
+        <Grid x:Name="Favorites_Grid" d:IsHidden="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>

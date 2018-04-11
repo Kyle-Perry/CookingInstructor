@@ -138,7 +138,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>false</isFavorite>
+    <isFavorite>true</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 6</recipeName>
@@ -166,7 +166,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>false</isFavorite>
+    <isFavorite>true</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 7</recipeName>
@@ -250,7 +250,7 @@
         <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>false</isFavorite>
+    <isFavorite>true</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 10</recipeName>
@@ -276,6 +276,34 @@
       <Instruction>
         <info>Do another thing</info>
         <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>TextBox</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Ingredient_Name</name>
+        <measure />
+        <amount>0</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Ingredient_Name</name>
+        <measure />
+        <amount>0</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Instruction</info>
+        <photoPath>Upload Photo</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Instruction</info>
+        <photoPath>Upload Photo</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>

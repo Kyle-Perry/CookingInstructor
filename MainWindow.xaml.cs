@@ -30,7 +30,7 @@ namespace ProjectD2
             serializer = new Serializer("recipes.xml");
             target = null;
             InitializeComponent();
-            //recipes = serializer.Read();
+            recipes = serializer.Read();
             if (recipes == null)
             {
                 recipes = new List<Recipe>();
@@ -56,9 +56,15 @@ namespace ProjectD2
                     Recipe_Grid.Children.Add(a);
 
                     a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                    if(recipe.isFavorite)
+                    {
+                        RecipeTileControl b = new RecipeTileControl(recipe);
+                        Recipe_Grid_Copy.Children.Add(b);
+
+                        b.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                    }
                 }
             }
-            serializer.WriteRecipes(recipes);
 
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
@@ -68,18 +74,6 @@ namespace ProjectD2
             StepGridMiddle.Visibility = Visibility.Hidden;
             StepGridEnd.Visibility = Visibility.Hidden;
 
-        }
-
-        private void AddIngredient_Button_Click(object sender, RoutedEventArgs e)
-        {
-            IngredientInfoControl another = new IngredientInfoControl();
-            IngredientList.Children.Add(another);
-        }
-
-        private void AddStep_Button_Click(object sender, RoutedEventArgs e)
-        {
-            RecipeInstructionControl another = new RecipeInstructionControl();
-            InstructionList.Children.Add(another);
         }
 
         private void ViewRecipeBack_Button_Click(object sender, RoutedEventArgs e)
@@ -197,11 +191,7 @@ namespace ProjectD2
             StepGridEnd.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Visible;
         }
-
-        private void AddRecipe_AddButton_Click(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+        
         private void Favorites_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Visible;
@@ -230,6 +220,51 @@ namespace ProjectD2
 
                 Recipe_Grid_Copy.Children.Add(addFav);
             }
+            serializer.WriteRecipes(recipes);
+
         }
+
+        private void AddIngredient_Button_Click(object sender, RoutedEventArgs e)
+        {
+            IngredientInfoControl another = new IngredientInfoControl();
+            IngredientList.Children.Add(another);
+        }
+
+        private void AddStep_Button_Click(object sender, RoutedEventArgs e)
+        {
+            RecipeInstructionControl another = new RecipeInstructionControl();
+            InstructionList.Children.Add(another);
+        }
+
+        private void AddRecipe_AddButton_Click(object sender, MouseButtonEventArgs e)
+        {
+            List<Ingredient> rIngredients = new List<Ingredient>();
+            List<Instruction> rInstructions = new List<Instruction>();
+
+            foreach(RecipeInstructionControl i in InstructionList.Children)
+            {
+                Instruction newInstruction = new Instruction(i.StepInstruction.Text, i.PhotoFilepath.Text);
+                rInstructions.Add(newInstruction);
+            }
+
+            foreach(IngredientInfoControl i in IngredientList.Children)
+            {
+                Ingredient newIngredient = new Ingredient();
+                newIngredient.name = i.IngredientName.Text;
+                newIngredient.measure = i.QuantitySelector.Text;
+                double measure = Convert.ToDouble(i.IngredientQuantity);
+                rIngredients.Add(newIngredient);
+            }
+
+            Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", rIngredients, rInstructions);
+            RecipeTileControl addNew = new RecipeTileControl(recipe);
+            addNew.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+            
+            Recipe_Grid.Children.Add(addNew);
+            recipes.Add(recipe);
+            serializer.WriteRecipes(recipes);
+
+        }
+
     }
 }
