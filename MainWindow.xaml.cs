@@ -75,6 +75,7 @@ namespace ProjectD2
             StepGridFirst.Visibility = Visibility.Hidden;
             StepGridMiddle.Visibility = Visibility.Hidden;
             StepGridEnd.Visibility = Visibility.Hidden;
+            Search_Grid.Visibility = Visibility.Hidden;
 
         }
 
@@ -217,6 +218,8 @@ namespace ProjectD2
         {
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
+            this.Search.Text = Search_Box.Text;
+            Search_Box.Text = "";
             last = Search_Grid;
         }
 
