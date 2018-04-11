@@ -7,7 +7,6 @@ public class Serializer
 {
     XmlSerializer serializer;
     string filename;
-    StreamWriter writer;
 
     public Serializer(string filename)
     {

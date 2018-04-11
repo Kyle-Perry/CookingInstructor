@@ -261,7 +261,7 @@
 
         </Grid>
 
-        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
+        <Grid x:Name="AddRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <ComboBox x:Name="CategoryBox" Margin="129.3,104.998,250.7,610.155" FontSize="18">
                 <ComboBoxItem Content="Main" HorizontalAlignment="Left" Width="118"/>
                 <ComboBoxItem Content="Side" HorizontalAlignment="Left" Width="118"/>
@@ -289,7 +289,7 @@
                 <TextBlock x:Name="AddRecipe" TextWrapping="Wrap" TextAlignment="Center" FontSize="27" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Add Recipe"/>
             </Border>
         </Grid>
-        <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
+        <Grid x:Name="ViewRecipe_Grid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
             <TextBlock x:Name="RecipeName" HorizontalAlignment="Left" Margin="20.666,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="294.667" Text="Recipe Name:" Foreground="White" TextDecorations="Underline"/>
             <Button x:Name="AddToFav_Button" Content="«" HorizontalAlignment="Left" Margin="448.077,23.987,0,0" VerticalAlignment="Top" Width="31.923" Height="31.924" FontSize="24" FontFamily="Wingdings" Background="White" Foreground="#FF008BFF" Click="AddToFav_Button_Click"/>
             <ScrollViewer x:Name="RecipeScroller" HorizontalAlignment="Left" Height="402.332" VerticalAlignment="Top" Width="459.334" Margin="20.666,54.923,0,0" Cursor="ScrollNS">

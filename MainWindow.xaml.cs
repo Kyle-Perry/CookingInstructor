@@ -23,6 +23,7 @@ namespace ProjectD2
         public Recipe target;
         public List<Recipe> recipes;
         public Serializer serializer;
+        public Grid last;
 
         public MainWindow()
         {
@@ -67,6 +68,7 @@ namespace ProjectD2
             }
 
             HomePage_Grid.Visibility = Visibility.Visible;
+            last = HomePage_Grid;
             Favorites_Grid.Visibility = Visibility.Hidden;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
@@ -79,12 +81,13 @@ namespace ProjectD2
         private void ViewRecipeBack_Button_Click(object sender, RoutedEventArgs e)
         {
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
-            HomePage_Grid.Visibility = Visibility.Visible;
+            last.Visibility = Visibility.Visible;
         }
 
         private void AddRecipeBack_Button_Click(object sender, RoutedEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Visible;
+            last = HomePage_Grid;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
         }
 
@@ -117,12 +120,15 @@ namespace ProjectD2
         {
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
+            last = HomePage_Grid;
         }
 
         private void Favorites_Button_Click(object sender, MouseButtonEventArgs e)
         {
             HomePage_Grid.Visibility = Visibility.Hidden;
             Favorites_Grid.Visibility = Visibility.Visible;
+            last = Favorites_Grid;
+
         }
 
         private void AddRecipe_Click(object sender, MouseButtonEventArgs e)
@@ -135,13 +141,14 @@ namespace ProjectD2
         private void Recipe_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ViewRecipe_Grid.Visibility = Visibility.Hidden;
-            HomePage_Grid.Visibility = Visibility.Visible;
+            last.Visibility = Visibility.Visible;
         }
 
         private void AddRecipe_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
             AddRecipe_Grid.Visibility = Visibility.Hidden;
             HomePage_Grid.Visibility = Visibility.Visible;
+            last = HomePage_Grid;
         }
 
         private void StartCooking_Click(object sender, MouseButtonEventArgs e)
@@ -196,18 +203,21 @@ namespace ProjectD2
         {
             HomePage_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
+            last = HomePage_Grid;
         }
 
         private void Search_Back_Press(object sender, MouseButtonEventArgs e)
         {
             Search_Grid.Visibility = Visibility.Hidden;
             HomePage_Grid.Visibility = Visibility.Visible;
+            last = HomePage_Grid;
         }
 
         private void SearchButton_Press(object sender, MouseButtonEventArgs e)
         {
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
+            last = Search_Grid;
         }
 
         private void AddToFav_Button_Click(object sender, RoutedEventArgs e)
