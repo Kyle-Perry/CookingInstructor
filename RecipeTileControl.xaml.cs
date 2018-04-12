@@ -27,26 +27,7 @@ namespace ProjectD2
             InitializeComponent();
             this.recipe = recipe;
             this.Recipe_Name.Text = this.recipe.recipeName;
-            if (recipe.photoPath != null)
-            {
-                try
-                {
-                    //FileStream imgSrc = new FileStream(this.recipe.photoPath, FileMode.Open, FileAccess.Read);
-                    Uri imgSrc = new Uri(this.recipe.photoPath, UriKind.Absolute);
-                    BitmapImage src = new BitmapImage();
-                    //src.StreamSource = imgSrc;
-                    src.UriSource = imgSrc;
-                    src.CacheOption = BitmapCacheOption.OnLoad;
-                    BeginInit();
-                    this.Recipe_Image.Source = src;
-                    EndInit();
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-                    
-            }
+
         }
     }
 

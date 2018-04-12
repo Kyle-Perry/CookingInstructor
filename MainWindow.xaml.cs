@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace ProjectD2
             target = null;
             instructionIndex = 0;
             InitializeComponent();
-            //recipes = serializer.Read();
+            recipes = serializer.Read();
             if (recipes == null)
             {
                 recipes = new List<Recipe>();
@@ -48,9 +49,14 @@ namespace ProjectD2
                     recipe.instructions.Add(new Instruction("Do another thing", "pasta.jpg"));
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     recipes.Add(recipe);
+                    a.Recipe_Image.BeginInit();
+                    SetImage(recipe.photoPath, a.Recipe_Image.Source);
+                    a.Recipe_Image.EndInit();
+
                     Recipe_Grid.Children.Add(a);
 
                     a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+
                 }
             }
             else
@@ -58,6 +64,11 @@ namespace ProjectD2
                 foreach (Recipe recipe in recipes)
                 {
                     RecipeTileControl a = new RecipeTileControl(recipe);
+
+                    a.Recipe_Image.BeginInit();
+                    SetImage(recipe.photoPath, a.Recipe_Image.Source);
+                    a.Recipe_Image.EndInit();
+
                     Recipe_Grid.Children.Add(a);
 
                     a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
@@ -68,6 +79,7 @@ namespace ProjectD2
 
                         b.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
                     }
+
                 }
             }
 
@@ -100,34 +112,7 @@ namespace ProjectD2
         private void Tile_MouseDown(object sender, MouseButtonEventArgs e)
         {
             target = (sender as RecipeTileControl).recipe;
-            if (target.isFavorite == true)
-            {
-                AddToFav_Button.Foreground = background;
-                AddToFav_Button.Background = foreground;
-            }
-            else
-            {
-                AddToFav_Button.Foreground = foreground;
-                AddToFav_Button.Background = background;
-            }
-            RecipeName.Text = target.recipeName;
-            RecipeInstructionList1.Text = "";
-            IngredientsList.Children.Clear();
-            foreach (Ingredient ingredient in target.ingredients)
-            {
-                IngredientPieceControl piece = new IngredientPieceControl(ingredient);
-                IngredientsList.Children.Add(piece);
-            }
-            int i = 1;
-            foreach (Instruction instruction in target.instructions)
-            {
-                RecipeInstructionList1.Text += i + ".) " + instruction.info + "\n";
-                i++;
-            }
-            HomePage_Grid.Visibility = Visibility.Hidden;
-            ViewRecipe_Grid.Visibility = Visibility.Visible;
-            Favorites_Grid.Visibility = Visibility.Hidden;
-            Search_Grid.Visibility = Visibility.Hidden;
+            LoadRecipe(target);
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -245,12 +230,11 @@ namespace ProjectD2
             Search_Scroller_Grid.Children.Clear();
             last = HomePage_Grid;
         }
-
         private void SearchButton_Press(object sender, MouseButtonEventArgs e)
         {
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
-            this.Search.Text = "\"" + Search_Box.Text + "\"";
+            this.Search.Text = "Search results for \"" + Search_Box.Text + "\"";
             foreach (Recipe recipe in recipes)
             {
                 if (!Search_Box.Text.Equals(""))
@@ -343,8 +327,12 @@ namespace ProjectD2
         {
             Random rnd = new Random();
             Recipe ranRecipe = recipes[rnd.Next(0, recipes.Count)];
+            LoadRecipe(ranRecipe);
+        }
 
-            target = ranRecipe;
+        private void LoadRecipe(Recipe aRecipe)
+        {
+            target = aRecipe;
             if (target.isFavorite == true)
             {
                 AddToFav_Button.Foreground = background;
@@ -373,6 +361,29 @@ namespace ProjectD2
             ViewRecipe_Grid.Visibility = Visibility.Visible;
             Favorites_Grid.Visibility = Visibility.Hidden;
             Search_Grid.Visibility = Visibility.Hidden;
+        }
+
+        public void SetImage(string filepath, ImageSource image)
+        {
+
+            if (filepath != null)
+            {
+                try
+                {
+                    BitmapImage src = new BitmapImage();
+                    FileStream imgSrc = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+                    src.StreamSource = imgSrc;
+                    //Uri imgSrc = new Uri(filepath, UriKind.Absolute);
+                    //src.UriSource = imgSrc;
+                    src.CacheOption = BitmapCacheOption.OnLoad;
+                    image = src;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+
+            }
         }
     }
 }
