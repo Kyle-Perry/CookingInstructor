@@ -48,6 +48,7 @@ namespace ProjectD2
                     recipe.ingredients.Add(new Ingredient("Dry", "tsp", 2));
                     recipe.instructions.Add(new Instruction("Do a thing", "pasta.jpg"));
                     recipe.instructions.Add(new Instruction("Do another thing", "pasta.jpg"));
+                    recipe.instructions.Add(new Instruction("Do one last thing", "pasta.jpg"));
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     recipes.Add(recipe);
                     a.Recipe_Image.BeginInit();
