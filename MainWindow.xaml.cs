@@ -47,12 +47,12 @@ namespace ProjectD2
                     recipe.ingredients.Add(new Ingredient("Liquid", "ml", 250));
                     recipe.ingredients.Add(new Ingredient("Dry", "tsp", 2));
                     recipe.instructions.Add(new Instruction("Do a thing", "pasta.jpg"));
-                    recipe.instructions.Add(new Instruction("Do another thing", "pasta.jpg"));
-                    recipe.instructions.Add(new Instruction("Do one last thing", "pasta.jpg"));
+                    recipe.instructions.Add(new Instruction("Do another thing", "garlic_bread.jpeg"));
+                    recipe.instructions.Add(new Instruction("Do one last thing", "tiramisu.jpg"));
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     recipes.Add(recipe);
                     a.Recipe_Image.BeginInit();
-                    SetImage(recipe.photoPath, a.Recipe_Image.Source);
+                    a.Recipe_Image.Source = LoadImage(recipe.photoPath);
                     a.Recipe_Image.EndInit();
 
                     Recipe_Grid.Children.Add(a);
@@ -68,7 +68,7 @@ namespace ProjectD2
                     RecipeTileControl a = new RecipeTileControl(recipe);
 
                     a.Recipe_Image.BeginInit();
-                    SetImage(recipe.photoPath, a.Recipe_Image.Source);
+                    a.Recipe_Image.Source = LoadImage(recipe.photoPath);
                     a.Recipe_Image.EndInit();
 
                     Recipe_Grid.Children.Add(a);
@@ -178,6 +178,7 @@ namespace ProjectD2
             StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
             BackArrow.Visibility = Visibility.Hidden;
             ForwardArrow.Visibility = Visibility.Visible;
+            StepHelperImage.Source = LoadImage(target.instructions[0].photoPath);
             if (target.instructions.Count == 1)
             {
                 ForwardArrow.Visibility = Visibility.Hidden;
@@ -189,6 +190,8 @@ namespace ProjectD2
             instructionIndex++;
             StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
             StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
+            StepHelperImage.Source = LoadImage(target.instructions[instructionIndex].photoPath);
+
             if (target.instructions.Count > (instructionIndex + 1))
             {
                 ForwardArrow.Visibility = Visibility.Visible;
@@ -212,6 +215,8 @@ namespace ProjectD2
             instructionIndex--;
             StepDescription.Text = target.instructions.ElementAt(instructionIndex).info;
             StepNumber.Text = "Step " + (instructionIndex + 1) + " of " + target.instructions.Count;
+            StepHelperImage.Source = LoadImage(target.instructions[instructionIndex].photoPath);
+
             if (target.instructions.Count > (instructionIndex + 1))
             {
                 ForwardArrow.Visibility = Visibility.Visible;
@@ -345,6 +350,7 @@ namespace ProjectD2
                     recipe.instructions.Add(new Instruction(rec.StepInstruction.Text, rec.PhotoFilepath.Text));
                 }
                 RecipeTileControl a = new RecipeTileControl(recipe);
+                a.Recipe_Image.Source = LoadImage(recipe.photoPath);
                 recipes.Add(recipe);
                 Recipe_Grid.Children.Add(a);
 
@@ -357,6 +363,7 @@ namespace ProjectD2
                 HomePage_Grid.Visibility = Visibility.Visible;
                 AddRecipe_Grid.Visibility = Visibility.Hidden;
                 last = HomePage_Grid;
+                serializer.WriteRecipes(recipes);
             }
             catch(FormatException exception)
             {
@@ -385,6 +392,7 @@ namespace ProjectD2
                 AddToFav_Button.Foreground = foreground;
                 AddToFav_Button.Background = background;
             }
+            RecipePhoto.Source = LoadImage(target.photoPath);
             RecipeName.Text = target.recipeName;
             RecipeInstructionList1.Text = "";
             IngredientsList.Children.Clear();
@@ -405,7 +413,7 @@ namespace ProjectD2
             Search_Grid.Visibility = Visibility.Hidden;
         }
 
-        public void SetImage(string filepath, ImageSource image)
+        public BitmapImage LoadImage(string filepath)
         {
 
             if (filepath != null)
@@ -414,18 +422,28 @@ namespace ProjectD2
                 {
                     BitmapImage src = new BitmapImage();
                     FileStream imgSrc = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+
+                    src.BeginInit();
                     src.StreamSource = imgSrc;
+
                     //Uri imgSrc = new Uri(filepath, UriKind.Absolute);
                     //src.UriSource = imgSrc;
+
                     src.CacheOption = BitmapCacheOption.OnLoad;
-                    image = src;
+                    src.EndInit();
+                    
+                    src.Freeze();
+
+                    return src;
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
+                    return new BitmapImage();
                 }
 
             }
+            return new BitmapImage();
         }
     }
 }

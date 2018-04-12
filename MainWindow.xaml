@@ -327,16 +327,7 @@
                 <Ellipse x:Name="Circle" HorizontalAlignment="Center" Stroke="White" Width="82.5" StrokeThickness="8" Margin="0,3,0,-3" Fill="#FF1D1D1D"/>
                 <TextBlock x:Name="Arrow" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" Width="63.5" FontFamily="Wingdings 3" Margin="9.5,0"><Run FontSize="72" FontFamily="Wingdings" Text="á"/></TextBlock>
             </Grid>
-            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="163.127,215.154,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" >
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="270"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+            <Image x:Name="StepHelperImage" HorizontalAlignment="Left" Height="173" Margin="164.5,40,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" />
             <Border x:Name="StopCooking_Button" BorderBrush="White" BorderThickness="0,5,5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="177.379" CornerRadius="0                     , 50, 0, 0" Background="#FF49AEF0" Margin="0,673.091,0,0" MouseDown="StopCooking_Button_MouseDown">
                 <TextBlock x:Name="textBlock10" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Foreground="White" Text="Stop Cooking" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>

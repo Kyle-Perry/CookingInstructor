@@ -3,7 +3,7 @@
   <Recipe>
     <recipeName>Recipe 1</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -23,19 +23,19 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>true</isFavorite>
+    <isFavorite>false</isFavorite>
   </Recipe>
   <Recipe>
     <recipeName>Recipe 2</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -55,11 +55,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -67,7 +67,7 @@
   <Recipe>
     <recipeName>Recipe 3</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -87,11 +87,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -99,7 +99,7 @@
   <Recipe>
     <recipeName>Recipe 4</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -119,11 +119,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -131,7 +131,7 @@
   <Recipe>
     <recipeName>Recipe 5</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -151,11 +151,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -163,7 +163,7 @@
   <Recipe>
     <recipeName>Recipe 6</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -183,11 +183,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -195,7 +195,7 @@
   <Recipe>
     <recipeName>Recipe 7</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -215,11 +215,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -227,7 +227,7 @@
   <Recipe>
     <recipeName>Recipe 8</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -247,11 +247,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -259,7 +259,7 @@
   <Recipe>
     <recipeName>Recipe 9</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -279,11 +279,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -291,7 +291,7 @@
   <Recipe>
     <recipeName>Recipe 10</recipeName>
     <category>Main</category>
-    <photoPath>C:\Users\xm\Documents\GitHub\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
     <ingredients>
       <Ingredient>
         <name>Liquid</name>
@@ -311,11 +311,11 @@
       </Instruction>
       <Instruction>
         <info>Do another thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>garlic_bread.jpeg</photoPath>
       </Instruction>
       <Instruction>
         <info>Do one last thing</info>
-        <photoPath>pasta.jpg</photoPath>
+        <photoPath>tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>
@@ -324,24 +324,17 @@
     <recipeName>TextBox</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Ingredient_Name</name>
-        <measure>tsp</measure>
-        <amount>12</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Ingredient_Name</name>
-        <measure>tbsp</measure>
-        <amount>13</amount>
-      </Ingredient>
-    </ingredients>
+    <ingredients />
     <instructions>
       <Instruction>
         <info>Instruction</info>
-        <photoPath>Upload Photo</photoPath>
+        <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Instruction</info>
+        <photoPath>U:\c481\CookingInstructor\bin\Release\tiramisu.jpg</photoPath>
       </Instruction>
     </instructions>
-    <isFavorite>true</isFavorite>
+    <isFavorite>false</isFavorite>
   </Recipe>
 </ArrayOfRecipe>
