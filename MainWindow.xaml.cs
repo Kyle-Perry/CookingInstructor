@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -162,7 +163,7 @@ namespace ProjectD2
 
             var confirmResult = System.Windows.Forms.MessageBox.Show("Leave without saving progress?",
                                      "Exiting Add Recipe",
-                                     System.Windows.Forms.MessageBoxButtons.YesNoCancel);
+                                     MessageBoxButtons.YesNoCancel);
             if (confirmResult == System.Windows.Forms.DialogResult.Yes)
             {
                 AddRecipe_Grid.Visibility = Visibility.Hidden;
@@ -353,6 +354,7 @@ namespace ProjectD2
 
             HomePage_Grid.Visibility = Visibility.Visible;
             AddRecipe_Grid.Visibility = Visibility.Hidden;
+            last = HomePage_Grid;
 
         }
 
