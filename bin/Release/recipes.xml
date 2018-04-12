@@ -320,4 +320,28 @@
     </instructions>
     <isFavorite>false</isFavorite>
   </Recipe>
+  <Recipe>
+    <recipeName>TextBox</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Ingredient_Name</name>
+        <measure>tsp</measure>
+        <amount>12</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Ingredient_Name</name>
+        <measure>tbsp</measure>
+        <amount>13</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Instruction</info>
+        <photoPath>Upload Photo</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>true</isFavorite>
+  </Recipe>
 </ArrayOfRecipe>

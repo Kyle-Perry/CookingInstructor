@@ -317,31 +317,52 @@ namespace ProjectD2
 
         private void AddRecipe_AddButton_Click(object sender, MouseButtonEventArgs e)
         {
-            Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
-            NameBox.Text = "";
-            CategoryBox.Text = "";
-            for (int i = 0; i < IngredientList.Children.Count; i++)
+            bool hasBadIngredient = false;
+            try
             {
-                IngredientInfoControl ing = (IngredientInfoControl)IngredientList.Children[i];
-                recipe.ingredients.Add(new Ingredient(ing.IngredientName.Text, ing.QuantitySelector.Text, Convert.ToDouble(ing.IngredientQuantity.Text)));
+                Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                for (int i = 0; i < IngredientList.Children.Count; i++)
+                {
+                    try
+                    {
+                        IngredientInfoControl ing = (IngredientInfoControl)IngredientList.Children[i];
+                        recipe.ingredients.Add(new Ingredient(ing.IngredientName.Text, ing.QuantitySelector.Text, Convert.ToDouble(ing.IngredientQuantity.Text)));
+                        ing.IngredientQuantity.Background = new SolidColorBrush(Colors.White);
+                    }
+                    catch(FormatException badIngredient)
+                    {
+                        Console.WriteLine(badIngredient);
+                        IngredientInfoControl bad = (IngredientInfoControl)IngredientList.Children[i];
+                        bad.IngredientQuantity.Background = new SolidColorBrush(Colors.Pink);
+                        hasBadIngredient = true;
+                    }
+
+                }
+                if (hasBadIngredient) throw (new FormatException());
+                for (int i = 0; i < InstructionList.Children.Count; i++)
+                {
+                    RecipeInstructionControl rec = (RecipeInstructionControl)InstructionList.Children[i];
+                    recipe.instructions.Add(new Instruction(rec.StepInstruction.Text, rec.PhotoFilepath.Text));
+                }
+                RecipeTileControl a = new RecipeTileControl(recipe);
+                recipes.Add(recipe);
+                Recipe_Grid.Children.Add(a);
+
+                a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+                NameBox.Text = "";
+                CategoryBox.Text = "";
+                InstructionList.Children.Clear();
+                IngredientList.Children.Clear();
+
+                HomePage_Grid.Visibility = Visibility.Visible;
+                AddRecipe_Grid.Visibility = Visibility.Hidden;
+                last = HomePage_Grid;
             }
-            IngredientList.Children.Clear();
-            for (int i = 0; i < InstructionList.Children.Count; i++)
+            catch(FormatException exception)
             {
-                RecipeInstructionControl rec = (RecipeInstructionControl)InstructionList.Children[i];
-                recipe.instructions.Add(new Instruction(rec.StepInstruction.Text, rec.PhotoFilepath.Text));
+                System.Windows.Forms.MessageBox.Show("One or more ingredients has an invalid value","Add Recipe Error", MessageBoxButtons.OK);
+                Console.WriteLine(exception);
             }
-            InstructionList.Children.Clear();
-            RecipeTileControl a = new RecipeTileControl(recipe);
-            recipes.Add(recipe);
-            Recipe_Grid.Children.Add(a);
-
-            a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
-
-            HomePage_Grid.Visibility = Visibility.Visible;
-            AddRecipe_Grid.Visibility = Visibility.Hidden;
-            last = HomePage_Grid;
-
         }
 
         private void Random_Button_MouseDown(object sender, MouseButtonEventArgs e)
