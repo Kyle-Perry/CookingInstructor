@@ -237,7 +237,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" Background="#FF1D1D1D">
-        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D" d:IsHidden="True">
+        <Grid x:Name="HomePage_Grid" Background="#FF1D1D1D">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -252,7 +252,7 @@
             <Border x:Name="AddRecipe_Button" BorderBrush="White" BorderThickness="2.5,5,2.5,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="165" Margin="167.5,673.091,0,0" Background="#FF49AEF0" MouseDown="AddRecipe_Click">
                 <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
             </Border>
-            <Border x:Name="Random_Button" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0">
+            <Border x:Name="Random_Button" BorderBrush="White" BorderThickness="2.5,5,0,0" HorizontalAlignment="Left" Height="76.909" VerticalAlignment="Top" Width="167.5" Margin="332.5,673.091,0,0" Background="#FF49AEF0" MouseDown="Random_Button_MouseDown">
                 <TextBlock x:Name="textBlock3" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Random" Foreground="White"/>
             </Border>
             <Border x:Name="SearchButton" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="42.4" VerticalAlignment="Top" Width="45.019" Margin="407.854,24.836,0,0" Background="#FF49AEF0" MouseDown="SearchButton_Press">
@@ -312,7 +312,7 @@
                 <TextBlock x:Name="textBlock8" TextWrapping="Wrap" TextAlignment="Center" FontSize="27" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Start Cooking"/>
             </Border>
         </Grid>
-        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500">
+        <Grid x:Name="StepGrid" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="500" d:IsHidden="True">
             <TextBlock x:Name="StepNumber" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="108.99,251.564,0,0"><Run Text="Step X of Y"/></TextBlock>
             <TextBlock x:Name="StepDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is where the detailed instruction of the step will be contained. " VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.5,0.5" Margin="108.99,299.914,0,0" Height="144.923" Width="284.772"/>
             <Grid x:Name="ForwardArrow" Margin="410.968,275.473,6.532,394.617" MouseDown="ForwardArrow_MouseDown" RenderTransformOrigin="0.5,0.5">

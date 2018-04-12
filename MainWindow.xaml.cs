@@ -35,14 +35,14 @@ namespace ProjectD2
             target = null;
             instructionIndex = 0;
             InitializeComponent();
-            recipes = serializer.Read();
+            //recipes = serializer.Read();
             if (recipes == null)
             {
                 recipes = new List<Recipe>();
                 for (int i = 1; i <= 10; i++)
                 {
-                    Recipe recipe = new Recipe("Recipe " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
-                    recipe.ingredients.Add(new Ingredient("Liquid", "ml", 250 ));
+                    Recipe recipe = new Recipe("Recipe " + i, "Main", AppDomain.CurrentDomain.BaseDirectory + "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                    recipe.ingredients.Add(new Ingredient("Liquid", "ml", 250));
                     recipe.ingredients.Add(new Ingredient("Dry", "tsp", 2));
                     recipe.instructions.Add(new Instruction("Do a thing", "pasta.jpg"));
                     recipe.instructions.Add(new Instruction("Do another thing", "pasta.jpg"));
@@ -55,13 +55,13 @@ namespace ProjectD2
             }
             else
             {
-                foreach(Recipe recipe in recipes)
+                foreach (Recipe recipe in recipes)
                 {
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     Recipe_Grid.Children.Add(a);
 
                     a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
-                    if(recipe.isFavorite)
+                    if (recipe.isFavorite)
                     {
                         RecipeTileControl b = new RecipeTileControl(recipe);
                         Recipe_Grid_Copy.Children.Add(b);
@@ -113,13 +113,13 @@ namespace ProjectD2
             RecipeName.Text = target.recipeName;
             RecipeInstructionList1.Text = "";
             IngredientsList.Children.Clear();
-            foreach(Ingredient ingredient in target.ingredients)
+            foreach (Ingredient ingredient in target.ingredients)
             {
                 IngredientPieceControl piece = new IngredientPieceControl(ingredient);
                 IngredientsList.Children.Add(piece);
             }
             int i = 1;
-            foreach(Instruction instruction in target.instructions)
+            foreach (Instruction instruction in target.instructions)
             {
                 RecipeInstructionList1.Text += i + ".) " + instruction.info + "\n";
                 i++;
@@ -256,7 +256,7 @@ namespace ProjectD2
             {
                 if (!Search.Text.Equals(""))
                 {
-                    if (recipe.recipeName.IndexOf(Search.Text, StringComparison.OrdinalIgnoreCase) >=0)
+                    if (recipe.recipeName.IndexOf(Search.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         RecipeTileControl c = new RecipeTileControl(recipe);
                         Search_Scroller_Grid.Children.Add(c);
@@ -290,8 +290,8 @@ namespace ProjectD2
                         break;
                     }
                 }
-                    AddToFav_Button.Foreground = foreground;
-                    AddToFav_Button.Background = background;
+                AddToFav_Button.Foreground = foreground;
+                AddToFav_Button.Background = background;
             }
             serializer.WriteRecipes(recipes);
 
@@ -314,13 +314,13 @@ namespace ProjectD2
             List<Ingredient> rIngredients = new List<Ingredient>();
             List<Instruction> rInstructions = new List<Instruction>();
 
-            foreach(RecipeInstructionControl i in InstructionList.Children)
+            foreach (RecipeInstructionControl i in InstructionList.Children)
             {
                 Instruction newInstruction = new Instruction(i.StepInstruction.Text, i.PhotoFilepath.Text);
                 rInstructions.Add(newInstruction);
             }
 
-            foreach(IngredientInfoControl i in IngredientList.Children)
+            foreach (IngredientInfoControl i in IngredientList.Children)
             {
                 Ingredient newIngredient = new Ingredient();
                 newIngredient.name = i.IngredientName.Text;
@@ -332,11 +332,47 @@ namespace ProjectD2
             Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", rIngredients, rInstructions);
             RecipeTileControl addNew = new RecipeTileControl(recipe);
             addNew.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
-            
+
             Recipe_Grid.Children.Add(addNew);
             recipes.Add(recipe);
             serializer.WriteRecipes(recipes);
 
+        }
+
+        private void Random_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Random rnd = new Random();
+            Recipe ranRecipe = recipes[rnd.Next(0, recipes.Count)];
+
+            target = ranRecipe;
+            if (target.isFavorite == true)
+            {
+                AddToFav_Button.Foreground = background;
+                AddToFav_Button.Background = foreground;
+            }
+            else
+            {
+                AddToFav_Button.Foreground = foreground;
+                AddToFav_Button.Background = background;
+            }
+            RecipeName.Text = target.recipeName;
+            RecipeInstructionList1.Text = "";
+            IngredientsList.Children.Clear();
+            foreach (Ingredient ingredient in target.ingredients)
+            {
+                IngredientPieceControl piece = new IngredientPieceControl(ingredient);
+                IngredientsList.Children.Add(piece);
+            }
+            int i = 1;
+            foreach (Instruction instruction in target.instructions)
+            {
+                RecipeInstructionList1.Text += i + ".) " + instruction.info + "\n";
+                i++;
+            }
+            HomePage_Grid.Visibility = Visibility.Hidden;
+            ViewRecipe_Grid.Visibility = Visibility.Visible;
+            Favorites_Grid.Visibility = Visibility.Hidden;
+            Search_Grid.Visibility = Visibility.Hidden;
         }
     }
 }

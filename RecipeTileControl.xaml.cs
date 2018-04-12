@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,22 +24,29 @@ namespace ProjectD2
         public Recipe recipe;
         public RecipeTileControl(Recipe recipe)
         {
-            this.recipe = recipe;
             InitializeComponent();
+            this.recipe = recipe;
             this.Recipe_Name.Text = this.recipe.recipeName;
             if (recipe.photoPath != null)
             {
-                /*
-                BitmapImage src = new BitmapImage();
-                //src.BeginInit();
-                src.UriSource = new Uri(this.recipe.photoPath, UriKind.RelativeOrAbsolute);
-                src.CacheOption = BitmapCacheOption.OnDemand;
-                //src.EndInit();
-                this.Recipe_Image.Source = src;
-                this.Recipe_Image.Visibility = Visibility.Visible;
-                */
+                try
+                {
+                    //FileStream imgSrc = new FileStream(this.recipe.photoPath, FileMode.Open, FileAccess.Read);
+                    Uri imgSrc = new Uri(this.recipe.photoPath, UriKind.Absolute);
+                    BitmapImage src = new BitmapImage();
+                    //src.StreamSource = imgSrc;
+                    src.UriSource = imgSrc;
+                    src.CacheOption = BitmapCacheOption.OnLoad;
+                    BeginInit();
+                    this.Recipe_Image.Source = src;
+                    EndInit();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                    
             }
-       
         }
     }
 
