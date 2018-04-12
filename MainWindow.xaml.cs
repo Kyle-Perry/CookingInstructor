@@ -251,12 +251,11 @@ namespace ProjectD2
             Search_Grid.Visibility = Visibility.Visible;
             HomePage_Grid.Visibility = Visibility.Hidden;
             this.Search.Text = "\"" + Search_Box.Text + "\"";
-            Search_Box.Text = "";
             foreach (Recipe recipe in recipes)
             {
-                if (!Search.Text.Equals(""))
+                if (!Search_Box.Text.Equals(""))
                 {
-                    if (recipe.recipeName.IndexOf(Search.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                    if (recipe.recipeName.IndexOf(Search_Box.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         RecipeTileControl c = new RecipeTileControl(recipe);
                         Search_Scroller_Grid.Children.Add(c);
@@ -265,6 +264,7 @@ namespace ProjectD2
                     }
                 }
             }
+            Search_Box.Text = "";
             last = Search_Grid;
         }
 
