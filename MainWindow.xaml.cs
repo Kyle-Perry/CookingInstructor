@@ -159,9 +159,28 @@ namespace ProjectD2
 
         private void AddRecipe_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            AddRecipe_Grid.Visibility = Visibility.Hidden;
-            HomePage_Grid.Visibility = Visibility.Visible;
-            last = HomePage_Grid;
+
+            var confirmResult = System.Windows.Forms.MessageBox.Show("Leave without saving progress?",
+                                     "Exiting Add Recipe",
+                                     System.Windows.Forms.MessageBoxButtons.YesNoCancel);
+            if (confirmResult == System.Windows.Forms.DialogResult.Yes)
+            {
+                AddRecipe_Grid.Visibility = Visibility.Hidden;
+                HomePage_Grid.Visibility = Visibility.Visible;
+                last = HomePage_Grid;
+
+
+                NameBox.Text = "";
+                CategoryBox.Text = "";
+                IngredientList.Children.Clear();
+                InstructionList.Children.Clear();
+            }
+            else if (confirmResult == System.Windows.Forms.DialogResult.No)
+            {
+                AddRecipe_Grid.Visibility = Visibility.Hidden;
+                HomePage_Grid.Visibility = Visibility.Visible;
+                last = HomePage_Grid;
+            }
         }
 
         private void StartCooking_Click(object sender, MouseButtonEventArgs e)
@@ -311,31 +330,29 @@ namespace ProjectD2
 
         private void AddRecipe_AddButton_Click(object sender, MouseButtonEventArgs e)
         {
-            List<Ingredient> rIngredients = new List<Ingredient>();
-            List<Instruction> rInstructions = new List<Instruction>();
-
-            foreach (RecipeInstructionControl i in InstructionList.Children)
+            Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+            NameBox.Text = "";
+            CategoryBox.Text = "";
+            for (int i = 0; i < IngredientList.Children.Count; i++)
             {
-                Instruction newInstruction = new Instruction(i.StepInstruction.Text, i.PhotoFilepath.Text);
-                rInstructions.Add(newInstruction);
+                IngredientInfoControl ing = (IngredientInfoControl)IngredientList.Children[i];
+                recipe.ingredients.Add(new Ingredient(ing.IngredientName.Text, ing.QuantitySelector.Text, Convert.ToDouble(ing.IngredientQuantity.Text)));
             }
-
-            foreach (IngredientInfoControl i in IngredientList.Children)
+            IngredientList.Children.Clear();
+            for (int i = 0; i < InstructionList.Children.Count; i++)
             {
-                Ingredient newIngredient = new Ingredient();
-                newIngredient.name = i.IngredientName.Text;
-                newIngredient.measure = i.QuantitySelector.Text;
-                double measure = Convert.ToDouble(i.IngredientQuantity);
-                rIngredients.Add(newIngredient);
+                RecipeInstructionControl rec = (RecipeInstructionControl)InstructionList.Children[i];
+                recipe.instructions.Add(new Instruction(rec.StepInstruction.Text, rec.PhotoFilepath.Text));
             }
-
-            Recipe recipe = new Recipe(NameBox.Text, CategoryBox.Text, "pasta.jpg", rIngredients, rInstructions);
-            RecipeTileControl addNew = new RecipeTileControl(recipe);
-            addNew.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
-
-            Recipe_Grid.Children.Add(addNew);
+            InstructionList.Children.Clear();
+            RecipeTileControl a = new RecipeTileControl(recipe);
             recipes.Add(recipe);
-            serializer.WriteRecipes(recipes);
+            Recipe_Grid.Children.Add(a);
+
+            a.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
+
+            HomePage_Grid.Visibility = Visibility.Visible;
+            AddRecipe_Grid.Visibility = Visibility.Hidden;
 
         }
 
