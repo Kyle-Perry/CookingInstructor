@@ -1,338 +1,321 @@
 <?xml version="1.0"?>
 <ArrayOfRecipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Recipe>
-    <recipeName>Recipe 1</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 2</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 3</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 4</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 5</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 6</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 7</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 8</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 9</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>Recipe 10</recipeName>
-    <category>Main</category>
-    <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
-    <ingredients>
-      <Ingredient>
-        <name>Liquid</name>
-        <measure>ml</measure>
-        <amount>250</amount>
-      </Ingredient>
-      <Ingredient>
-        <name>Dry</name>
-        <measure>tsp</measure>
-        <amount>2</amount>
-      </Ingredient>
-    </ingredients>
-    <instructions>
-      <Instruction>
-        <info>Do a thing</info>
-        <photoPath>pasta.jpg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do another thing</info>
-        <photoPath>garlic_bread.jpeg</photoPath>
-      </Instruction>
-      <Instruction>
-        <info>Do one last thing</info>
-        <photoPath>tiramisu.jpg</photoPath>
-      </Instruction>
-    </instructions>
-    <isFavorite>false</isFavorite>
-  </Recipe>
-  <Recipe>
-    <recipeName>TextBox</recipeName>
+    <recipeName>Pasta 1</recipeName>
     <category>Main</category>
     <photoPath>pasta.jpg</photoPath>
-    <ingredients />
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
     <instructions>
       <Instruction>
-        <info>Instruction</info>
-        <photoPath>U:\c481\CookingInstructor\bin\Release\pasta.jpg</photoPath>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
       </Instruction>
       <Instruction>
-        <info>Instruction</info>
-        <photoPath>U:\c481\CookingInstructor\bin\Release\tiramisu.jpg</photoPath>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>true</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 2</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>true</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 3</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>true</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 4</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 5</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 6</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 7</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 8</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 9</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
+      </Instruction>
+    </instructions>
+    <isFavorite>false</isFavorite>
+  </Recipe>
+  <Recipe>
+    <recipeName>Pasta 10</recipeName>
+    <category>Main</category>
+    <photoPath>pasta.jpg</photoPath>
+    <ingredients>
+      <Ingredient>
+        <name>Tomato Sauce</name>
+        <measure>ml</measure>
+        <amount>1000</amount>
+      </Ingredient>
+      <Ingredient>
+        <name>Pasta</name>
+        <measure>g</measure>
+        <amount>200</amount>
+      </Ingredient>
+    </ingredients>
+    <instructions>
+      <Instruction>
+        <info>Boil tomato sauce.</info>
+        <photoPath>boilSauce.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Boil pasta after water has been boiled.</info>
+        <photoPath>boilPasta.jpg</photoPath>
+      </Instruction>
+      <Instruction>
+        <info>Put pasta on plate and pour sauce over it. Serve Hot.</info>
+        <photoPath>pasta.jpg</photoPath>
       </Instruction>
     </instructions>
     <isFavorite>false</isFavorite>

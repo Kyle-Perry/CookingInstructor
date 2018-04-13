@@ -4,12 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjectD2"
-             mc:Ignorable="d" 
-             d:DesignHeight="17.334" d:DesignWidth="217.166">
+             mc:Ignorable="d" Height="22.654" Width="226.743">
     <Grid>
-        <TextBox x:Name="IngredientQuantity" TextWrapping="Wrap" Text="Number" Margin="122,0,41.166,0" IsReadOnly="True"/>
-        <TextBlock x:Name="IngredientName" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Margin="0,0,89.21,0" Height="17.334" Width="127.956"><Run Text=" • Ingredient Name"/><LineBreak/><Run/></TextBlock>
-        <ComboBox x:Name="IngredientMeasurement" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41.166" Margin="176,0,0,0" Height="17.334">
+        <TextBox x:Name="IngredientQuantity" TextWrapping="Wrap" Text="Number" Margin="117,0,50.635,0" IsReadOnly="True"/>
+        <TextBlock x:Name="IngredientName" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Margin="0,0,109.743,0" Height="22.654" Width="117"><Run Text=" • Ingredient Name"/><LineBreak/><Run/></TextBlock>
+        <ComboBox x:Name="IngredientMeasurement" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41.166" Margin="181.108,0,0,0" Height="22.654">
             <ComboBoxItem Content="ml" HorizontalAlignment="Left" Width="92.17"/>
             <ComboBoxItem Content="l" HorizontalAlignment="Left" Width="92.17"/>
             <ComboBoxItem Content="tsp" HorizontalAlignment="Left" Width="92.17"/>

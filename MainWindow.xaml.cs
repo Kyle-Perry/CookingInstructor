@@ -43,12 +43,12 @@ namespace ProjectD2
                 recipes = new List<Recipe>();
                 for (int i = 1; i <= 10; i++)
                 {
-                    Recipe recipe = new Recipe("Recipe " + i, "Main", AppDomain.CurrentDomain.BaseDirectory + "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
-                    recipe.ingredients.Add(new Ingredient("Liquid", "ml", 250));
-                    recipe.ingredients.Add(new Ingredient("Dry", "tsp", 2));
-                    recipe.instructions.Add(new Instruction("Do a thing", "pasta.jpg"));
-                    recipe.instructions.Add(new Instruction("Do another thing", "garlic_bread.jpeg"));
-                    recipe.instructions.Add(new Instruction("Do one last thing", "tiramisu.jpg"));
+                    Recipe recipe = new Recipe("Pasta " + i, "Main", "pasta.jpg", new List<Ingredient>(), new List<Instruction>());
+                    recipe.ingredients.Add(new Ingredient("Tomato Sauce", "ml", 1000));
+                    recipe.ingredients.Add(new Ingredient("Pasta", "g", 200));
+                    recipe.instructions.Add(new Instruction("Boil tomato sauce.", "boilSauce.jpg"));
+                    recipe.instructions.Add(new Instruction("Boil pasta after water has been boiled.", "boilPasta.jpg"));
+                    recipe.instructions.Add(new Instruction("Put pasta on plate and pour sauce over it. Serve Hot.", "pasta.jpg"));
                     RecipeTileControl a = new RecipeTileControl(recipe);
                     recipes.Add(recipe);
                     a.Recipe_Image.BeginInit();
@@ -77,6 +77,9 @@ namespace ProjectD2
                     if (recipe.isFavorite)
                     {
                         RecipeTileControl b = new RecipeTileControl(recipe);
+                        b.Recipe_Image.BeginInit();
+                        b.Recipe_Image.Source = LoadImage(recipe.photoPath);
+                        b.Recipe_Image.EndInit();
                         Recipe_Grid_Copy.Children.Add(b);
 
                         b.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
@@ -270,7 +273,9 @@ namespace ProjectD2
                     {
                         RecipeTileControl c = new RecipeTileControl(recipe);
                         Search_Scroller_Grid.Children.Add(c);
-
+                        c.Recipe_Image.BeginInit();
+                        c.Recipe_Image.Source = LoadImage(recipe.photoPath);
+                        c.Recipe_Image.EndInit();
                         c.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
                     }
                 }
@@ -287,6 +292,9 @@ namespace ProjectD2
                 AddToFav_Button.Background = foreground;
                 target.isFavorite = true;
                 RecipeTileControl addFav = new RecipeTileControl(target);
+                addFav.Recipe_Image.BeginInit();
+                addFav.Recipe_Image.Source = LoadImage(target.photoPath);
+                addFav.Recipe_Image.EndInit();
                 addFav.MouseDown += new MouseButtonEventHandler(Tile_MouseDown);
                 Recipe_Grid_Copy.Children.Add(addFav);
             }
